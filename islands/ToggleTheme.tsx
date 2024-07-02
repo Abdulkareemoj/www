@@ -1,6 +1,6 @@
 import { Button } from "../components/Button.tsx";
-import IconSunFilled from "https://deno.land/x/tabler_icons_tsx@0.0.5/tsx/sun-filled.tsx";
-import IconMoonFilled from "https://deno.land/x/tabler_icons_tsx@0.0.5/tsx/moon-filled.tsx";
+import IconSunFilled from "https://deno.land/x/tabler_icons_tsx@0.0.7/tsx/sun-filled.tsx";
+import IconMoonFilled from "https://deno.land/x/tabler_icons_tsx@0.0.7/tsx/moon-filled.tsx";
 import { useState } from "preact/hooks";
 
 export default function ToggleTheme() {
