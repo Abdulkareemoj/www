@@ -1,5 +1,5 @@
-import IconMenu from "https://deno.land/x/tabler_icons_tsx@0.0.5/tsx/menu.tsx";
-import IconX from "https://deno.land/x/tabler_icons_tsx@0.0.5/tsx/x.tsx";
+import IconMenu from "https://deno.land/x/tabler_icons_tsx@0.0.7/tsx/menu.tsx";
+import IconX from "https://deno.land/x/tabler_icons_tsx@0.0.7/tsx/x.tsx";
 type ToggleMenuProps = {
   handleToggleMenuOnClick: MouseEventHandler<HTMLButtonElement>;
   isToggleMenuOpen: boolean;
