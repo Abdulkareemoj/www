@@ -8,7 +8,7 @@ import rehypeExternalLinks from 'rehype-external-links'
 import expressiveCode from 'astro-expressive-code'
 import { expressiveCodeOptions } from './src/site.config'
 import icon from 'astro-icon'
-import decapCmsOauth from 'astro-decap-cms-oauth'
+// import decapCms from 'astro-decap-cms-oauth'
 import vercel from '@astrojs/vercel/serverless'
 
 // https://astro.build/config
@@ -16,7 +16,7 @@ export default defineConfig({
 	site: 'https://example.me',
 	integrations: [
 		expressiveCode(expressiveCodeOptions),
-		decapCmsOauth(),
+		// decapCmsOauth(),
 		tailwind({
 			applyBaseStyles: false
 		}),
