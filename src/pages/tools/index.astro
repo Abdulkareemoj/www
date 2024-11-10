@@ -3,14 +3,67 @@ import PageLayout from '@/layouts/BaseLayout.astro'
 import ToolSection from '@/components/ToolSection.astro'
 import Button from '@/components/Button.astro'
 
-const DESIGN = [
+const EDITORS = [
+	{
+		name: 'VS Code',
+		description: 'IDE?, Text Editor?',
+		href: 'https://code.visualstudio.com/',
+		iconPath: 'vscode',
+		iconBgColour: '#2C2C32'
+	},
+	{
+		name: 'Neovim',
+		description: 'Text Editor',
+		href: 'https://www.neovim.com/',
+		iconPath: 'neovim',
+		iconBgColour: '#FF9800'
+	},
+	{
+		name: 'Visual Studio',
+		description: 'IDE',
+		href: 'https://www.viusalstudio.com/',
+		iconPath: 'visualstudio',
+		iconBgColour: '#EFEFEE'
+	}
+]
+
+const DEVTOOLS = [
 	{
 		name: 'Figma',
 		description: 'Design Tool',
 		href: 'https://www.figma.com/',
 		iconPath: 'figma',
 		iconBgColour: '#000001'
+	},
+	{
+		name: 'Hoppscotch',
+		description: 'API Development Tool',
+		href: 'https://hoppscotch.io',
+		iconPath: 'hoppscotch',
+		iconBgColour: '#FF5733'
+	},
+	{
+		name: 'Windows Terminal',
+		description: 'Terminal Emulator',
+		href: 'https://iterm2.com',
+		iconPath: 'windows-terminal',
+		iconBgColour: '#4D4D4D'
+	},
+	{
+		name: 'WSL with Kali Linux',
+		description: 'Linux Environment',
+		href: 'https://www.kali.org/docs/wsl/win-kex/',
+		iconPath: 'kali-linux',
+		iconBgColour: '#557C94'
 	}
+
+	// {
+	//     name: 'Penpot',
+	//     description: 'Design Tool',
+	//     href: 'https://penpot.app',
+	//     iconPath: 'penpot',
+	//     iconBgColour: '#00BFA6'
+	// }
 ]
 
 const PRODUCTIVITY = [
@@ -36,21 +89,67 @@ const PRODUCTIVITY = [
 		iconBgColour: '#7A3EE8'
 	}
 ]
-
-const DEVELOPMENT = [
+const BROWSERS = [
 	{
-		name: 'VS Code',
-		description: 'IDE',
-		href: 'https://code.visualstudio.com/',
-		iconPath: 'vscode',
-		iconBgColour: '#2C2C32'
+		name: 'Firefox',
+		description: 'Browser',
+		href: 'https://www.mozilla.org',
+		iconPath: 'firefox',
+		iconBgColour: '#FF7139'
 	},
 	{
-		name: 'ChatGPT',
-		description: 'AI',
-		href: 'https://chat.openai.com/',
-		iconPath: 'chatgpt',
-		iconBgColour: '#06A67F'
+		name: 'Arc',
+		description: 'Browser',
+		href: 'https://www.apple.com/safari',
+		iconPath: 'arc',
+		iconBgColour: '#414350'
+	},
+	{
+		name: 'Microsoft Edge',
+		description: 'Browser',
+		href: 'https://www.microsoft.com/en-us/edge',
+		iconPath: 'edge',
+		iconBgColour: '#0078D7'
+	}
+]
+const NOTETAKING_APPS = [
+	{
+		name: 'Sticky Notes',
+		description: 'For task management, long-term planning and notes',
+		href: 'https://www.notion.so',
+		iconPath: 'sticky-notes',
+		iconBgColour: '#FFCC00'
+	},
+	{
+		name: 'Microsoft OneNote',
+		description: 'For quick notes, mind-mapping and managing my newsletter',
+		href: 'https://www.onenote.com/',
+		iconPath: 'onenote',
+		iconBgColour: '#7719AA'
+	}
+]
+
+const HELPERAPPS = [
+	{
+		name: 'UniGetUI',
+		description: 'All-in-one package manager for Windows',
+		href: 'https://brew.sh',
+		iconPath: 'wingetui',
+		iconBgColour: '#0078D7'
+	},
+	{
+		name: 'Bitwarden',
+		description: 'Password manager which really checks the right boxes',
+		href: 'https://1password.com',
+		iconPath: 'bitwarden',
+		iconBgColour: '#175DDC'
+	},
+	{
+		name: 'Barrier',
+		description: 'Software KVM that allows sharing a mouse and keyboard over a network',
+		href: 'https://1password.com',
+		iconPath: 'barrier',
+		iconBgColour: '#00AEEF'
 	}
 ]
 ---
@@ -79,9 +178,13 @@ const DEVELOPMENT = [
 				<p>Tools and software I use daily</p>
 			</div>
 
-			<ToolSection title='Design' tools={DESIGN} />
+			<ToolSection title='Editors' tools={EDITORS} />
 			<ToolSection title='Productivity' tools={PRODUCTIVITY} />
-			<ToolSection title='Development' tools={DEVELOPMENT} />
+			<ToolSection title='Browsers' tools={BROWSERS} />
+			<ToolSection title='Note Taking' tools={NOTETAKING_APPS} />
+			<ToolSection title='Helper Apps' tools={HELPERAPPS} />
+			<ToolSection title='Dev Tools' tools={DEVTOOLS} />
+
 		</div>
 	</div>
 </PageLayout>
