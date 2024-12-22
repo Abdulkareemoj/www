@@ -9,7 +9,7 @@ import expressiveCode from 'astro-expressive-code'
 import { expressiveCodeOptions } from './src/site.config'
 import icon from 'astro-icon'
 // import decapCms from 'astro-decap-cms-oauth'
-import vercel from '@astrojs/vercel/serverless'
+import deno from '@deno/astro-adapter'
 
 // https://astro.build/config
 export default defineConfig({
@@ -43,7 +43,5 @@ export default defineConfig({
 	},
 	prefetch: true,
 	output: 'server',
-	adapter: vercel({
-		webAnalytics: { enabled: true }
-	})
+	adapter: deno()
 })
