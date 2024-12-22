@@ -4,7 +4,7 @@ description: 'Minimal portfolio and blog build with astro and no frameworks.'
 date: 'Mar 26 2024'
 demoURL: 'https://astro-nano-demo.vercel.app'
 repoURL: 'https://github.com/markhorn-dev/astro-nano'
-imagePath: './image.png'
+imageUrl: 'https://www.pexels.com/photo/beautiful-grey-headed-yellow-finch-on-wooden-perch-29796580/'
 altText: 'Alt text for image'
 ---
 

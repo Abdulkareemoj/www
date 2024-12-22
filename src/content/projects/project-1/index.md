@@ -4,7 +4,7 @@ description: 'Portfolio and blog build with astro.'
 date: 'Mar 18 2024'
 demoURL: 'https://astro-sphere-demo.vercel.app'
 repoURL: 'https://github.com/markhorn-dev/astro-sphere'
-imagePath: './image.png'
+imageUrl: 'https://www.pexels.com/photo/christmas-objects-on-a-white-and-gray-surface-5499117/'
 altText: 'Alt text for image'
 ---
 

@@ -1,21 +1,20 @@
 ---
 import { getCollection } from 'astro:content'
-import PageLayout from '@/layouts/BaseLayout.astro'
+import BaseLayout from '@/layouts/BaseLayout.astro'
 import ArrowCard from '@/components/ArrowCard.astro'
 import Button from '@components/Button.astro'
-import ProjectCard from '@components/ProjectCard.astro'
 
-const projects = (await getCollection('projects'))
-	.filter((project) => !project.data.draft)
-	.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+const projects = await getCollection('projects', ({ data }) => !data.draft)
+projects.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
 
 const meta = {
-	description: 'Projects',
-	title: 'Projects'
+	title: 'Projects',
+	description: 'A list of my projects',
+	articleDate: new Date().toISOString()
 }
 ---
 
-<PageLayout meta={meta}>
+<BaseLayout meta={meta}>
 	<div class='w-full'>
 		<Button title='Back' href='/' style='button'>
 			<svg
@@ -34,16 +33,8 @@ const meta = {
 		</Button>
 
 		<h1 class='mb-6 mt-5 text-2xl font-bold'>Projects</h1>
-		<div class='grid grid-cols-1 md:grid-cols-2 gap-4'>
-			{
-				projects.map((project) => (
-					<div>
-						<ArrowCard
-							entry={project}
-						/>
-					</div>
-				))
-			}
+		<div class='grid grid-cols-1 gap-4 md:grid-cols-2'>
+			{projects.map((project) => <ArrowCard entry={project} />)}
 		</div>
 	</div>
-</PageLayout>
+</BaseLayout>
