@@ -1,7 +1,8 @@
 import { fontFamily } from 'tailwindcss/defaultTheme'
 
-/** @type {import('tailwindcss').Config} */
-const config = {
+import { type Config } from 'tailwindcss'
+
+const config: Config = {
 	darkMode: ['class'],
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
 	safelist: ['dark'],
@@ -60,7 +61,7 @@ const config = {
 			},
 			fontFamily: {
 				sans: [...fontFamily.sans],
-				satoshi: ['Satoshi', 'sans'],
+				satoshi: ['Satoshi', 'sans']
 			}
 		}
 	}
