@@ -4,7 +4,6 @@ publishDate: '2024-02-04'
 description: 'Inserting data for over a 100 samoles by hand, thats just not the Programer/SWE way to do things...'
 
 tags: ['test']
-draft: true
 ---
 
 I was working on a personal project recently when i decided to test it out with real data but i realized that i couldn't type out and insert data for over a 100 samples by hand, thats just not the Programer/SWE way to do things. So i set out to find a better way to do it and m

@@ -4,7 +4,6 @@ publishDate: '2024-03-02'
 
 description: 'Windows Subsystem for Android (WSA) provides a seamless environment for running Android apps directly on Windows.'
 tags: ['test']
-draft: true
 ---
 
 When it comes to Android development, emulators have long been the go-to choice for testing and debugging applications. Whether with native applications or Hybrid apps, however with the advent of Windows Subsystem for Android (WSA), developers now have a decent alternative at their disposal. WSA provides a seamless environment for running Android apps directly on Windows, offering a more efficient and integrated development experience. In this article, we'll explore how to leverage WSA with Flutter for Android development, highlighting its benefits and providing a step-by-step guide to get started.

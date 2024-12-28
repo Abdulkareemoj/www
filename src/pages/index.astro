@@ -11,6 +11,8 @@ import { Image } from 'astro:assets'
 import astro from '@/assets/about-astro.png'
 
 import { getAllPosts, sortMDByDate } from '@/utils'
+import Button from '@/components/Button.astro'
+import Link from '@/components/Link.astro'
 
 const languages = ['Javascript/Typescript', 'C', 'Elixir', 'PHP', 'Bash']
 const frontend = [
@@ -121,9 +123,9 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 				<a href='http://'>Stride3D</a>{' '}
 				and<a href='http://'> Blender</a>, I also use mainly{' '}
 				<strong>NextJS</strong> for web development. I am also proficient with a variety of other frameworks,
-    making me adaptable to diverse project needs.
+				making me adaptable to diverse project needs.
 			</p>
-<!-- 			
+			<!-- 			
 			<p class='mb-4'>
 				Right now I&apos;m working on{' '}
 				<strong>
@@ -135,37 +137,57 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 		<Section title='Projects'>
 			<div class='flex flex-col gap-y-3 sm:flex-row sm:gap-x-3 sm:gap-y-0'>
 				<ProjectCard
-					href='https://www.google.com'
-					heading='Consectetur'
-					subheading='Lorem ipsum dolor sit amet consectetur adipisicing elit.'
+					href='/projects/Strmr '
+					heading='Strmr'
+					subheading='A Video Streaming Webiste, can be used as a template'
 					imagePath='/src/assets/coming-soon.png'
 					altText='Example'
 					class='w-full sm:w-1/2'
 				/>
 				<ProjectCard
-					as='div'
-					heading='Coming soon...'
-					subheading=''
+					href='/projects/SalesManApp'
+					heading='SalesManApp '
+					subheading='A Sales/CRM app built with Nextjs using the App Router and Supabase.'
+					imagePath='/src/assets/coming-soon.png'
+					altText='Example'
+					class='w-full sm:w-1/2'
+				/>
+
+				<ProjectCard
+					href='/projects/fresh-website'
+					heading='Fresh-Website'
+					subheading='Portfolio Template website built with Fresh and Deno.'
+					imagePath='/src/assets/coming-soon.png'
+					altText='Example'
+					class='w-full sm:w-1/2'
+				/>
+				<ProjectCard
+					href='/projects/node-react-ts-docker'
+					heading='node-react-ts-docker'
+					subheading='Containerized setup for both frontend and backend using React and Node.js'
 					imagePath='/src/assets/coming-soon.png'
 					altText='Lorem, ipsum dolor sit'
 					class='w-full sm:w-1/2'
 				/>
 			</div>
-		</Section>
+		</Section><Link href='/projects'> All projects →</Link>
 		{
 			allPostsByDate.length > 0 && (
-				<Section title='Posts'>
-					<ul class='flex flex-col gap-y-2'>
-						{allPostsByDate.map((p) => (
-							<li class='flex flex-col gap-x-2 sm:flex-row'>
-								<PostPreview post={p} />
-							</li>
-						))}
-					</ul>
-				</Section>
+				<>
+					<Section title='Posts'>
+						<ul class='flex flex-col gap-y-2'>
+							{allPostsByDate.map((p) => (
+								<li class='flex flex-col gap-x-2 sm:flex-row'>
+									<PostPreview post={p} />
+								</li>
+							))}
+						</ul>
+					</Section>
+					<Link href='/blog'>All posts →</Link>
+				</>
 			)
 		}
-<!-- 
+		<!-- 
 		<Section title='Experience'>
 			<Card
 				heading='Lorem Ipsum'
