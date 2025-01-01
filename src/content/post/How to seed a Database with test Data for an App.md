@@ -1,9 +1,7 @@
 ---
-Here's a revised draft with actual content:
-
-Title: How to Seed a Database with Test Data for an App
-Publish Date: '2024-02-04'
-Description: Manually inserting over 100 samples into a database isn't the programmer's way. Here's how to seed test data programmatically.
+title: How to Seed a Database with Test Data for an App
+publishDate: '2024-02-04'
+description: Manually inserting over 100 samples into a database isn't the programmer's way. Here's how to seed test data programmatically.
 
 Tags: ['test', 'database', 'prisma', 'faker.js']
 ---
@@ -15,7 +13,7 @@ This is where database seeding comes in—a technique to populate your database 
 
 [Faker.js](https://fakerjs.dev/) is a powerful library for generating fake data such as names, emails, addresses, and even lorem ipsum text. It's especially useful for creating large datasets quickly.
 
-#### Installing Faker.js
+### Installing Faker.js
 
 To get started, you need to install faker.js in your project:
 
