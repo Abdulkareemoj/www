@@ -2,7 +2,7 @@
 Here's a revised draft with actual content:
 
 Title: How to Seed a Database with Test Data for an App
-Publish Date: 2024-02-04
+Publish Date: '2024-02-04'
 Description: Manually inserting over 100 samples into a database isn't the programmer's way. Here's how to seed test data programmatically.
 
 Tags: ['test', 'database', 'prisma', 'faker.js']
