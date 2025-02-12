@@ -2,7 +2,7 @@
 company: 'Evans Brothers (Nigeria Publishers) Limited.'
 role: 'Full Stack Developer '
 dateStart: '03/01/2024'
-dateEnd: 'Current'
+dateEnd: '01/20/2025'
 ---
 
 - Developed a mobile and web app for creating book quotations and estimations, improving accuracy and reducing.
