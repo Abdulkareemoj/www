@@ -5,6 +5,7 @@ import FormattedDate from '@/components/FormattedDate.astro'
 import { readingTime } from '@lib/utils'
 import BackToPrev from '@/components/BackToPrev.astro'
 import Link from '@components/Link.astro'
+import Button from '@components/Button.astro'
 
 export const prerender = true
 
@@ -30,8 +31,6 @@ const meta = {
 	articleDate: project.data.date.toISOString(),
 	ogImage: project.data.imageUrl
 }
-
-
 ---
 
 <BaseLayout meta={meta}>
@@ -62,21 +61,19 @@ const meta = {
 				(project.data.demoURL || project.data.repoURL) && (
 					<nav class='animate flex gap-1'>
 						{project.data.demoURL && (
-							<Link href={project.data.demoURL} external>
-								demo
-							</Link>
+							<Button title='demo' style='button' href={project.data.demoURL} />
 						)}
 						{project.data.demoURL && project.data.repoURL && <span>/</span>}
 						{project.data.repoURL && (
-							<Link href={project.data.repoURL} external>
+							<Button title='repo' style='button' href={project.data.repoURL}>
 								repo
-							</Link>
+							</Button>
 						)}
 					</nav>
 				)
 			}
 		</div>
-		<article class='animate prose'>
+		<article class='prose animate dark:text-white'>
 			<Content />
 		</article>
 	</div>

@@ -1,24 +1,44 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
 
-@font-face {
-	font-family: 'Satoshi';
-	src: url('/fonts/Satoshi-Variable.ttf');
-	font-style: normal;
-	font-display: swap;
+@config '../../tailwind.config.ts';
+
+/*
+  The default border color has changed to `currentColor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+	*,
+	::after,
+	::before,
+	::backdrop,
+	::file-selector-button {
+		border-color: var(--color-gray-200, currentColor);
+	}
 }
 
-@font-face {
-	font-family: 'Satoshi';
-	src: url('/fonts/Satoshi-VariableItalic.ttf');
-	font-style: italic;
-	font-display: swap;
+@layer utilities {
+	@font-face {
+		font-family: 'Satoshi';
+		src: url('/fonts/Satoshi-Variable.ttf');
+		font-style: normal;
+		font-display: swap;
+	}
+
+	@font-face {
+		font-family: 'Satoshi';
+		src: url('/fonts/Satoshi-VariableItalic.ttf');
+		font-style: italic;
+		font-display: swap;
+	}
 }
 
 @layer base {
 	:root {
-		--background: 210 33% 99%;
+		--background: 210 23% 90%;
 		--foreground: 240 10% 3.9%;
 		--card: 0 0% 100%;
 		--card-foreground: 240 10% 3.9%;
@@ -40,7 +60,7 @@
 		--radius: 0.5rem;
 	}
 	.dark {
-		--background: 240 10% 3.9%;
+		--background: 240 10% 11%;
 		--foreground: 0 0% 98%;
 		--card: 240 10% 3.9%;
 		--card-foreground: 0 0% 98%;

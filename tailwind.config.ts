@@ -1,4 +1,4 @@
-import { fontFamily } from 'tailwindcss/defaultTheme'
+import fontFamily from 'tailwindcss/defaultTheme'
 
 import { type Config } from 'tailwindcss'
 
@@ -60,7 +60,7 @@ const config: Config = {
 				sm: 'calc(var(--radius) - 4px)'
 			},
 			fontFamily: {
-				sans: [...fontFamily.sans],
+				// sans: [...fontFamily.],
 				satoshi: ['Satoshi', 'sans']
 			}
 		}
