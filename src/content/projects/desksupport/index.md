@@ -1,7 +1,6 @@
 ---
 title: 'DeskSupport'
-description: '
-Php Web App Template with User Login, Registration, Forgot Password, RBAC and other Pages.'
+description: 'DeskSupport is a customer support designed to provide a seamless and efficient support experience. '
 date: 'Mar 26 2024'
 demoURL: 'https://#'
 repoURL: 'https://github.com/Abdulkareemoj/DeskSupport'

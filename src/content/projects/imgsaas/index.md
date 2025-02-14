@@ -1,6 +1,6 @@
 ---
 title: 'imgsaas'
-description: ''
+description: 'SaaS app providing comprehensive suite of tools for image editing, document editing, and file conversion'
 date: 'Mar 26 2024'
 demoURL: 'https://#'
 repoURL: 'https://github.com/Abdulkareemoj/imgsaas'
