@@ -3,12 +3,12 @@ import fontFamily from 'tailwindcss/defaultTheme'
 import { type Config } from 'tailwindcss'
 
 const config: Config = {
-	darkMode: ['class'],
+	darkMode: 'class',
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
-	safelist: ['dark'],
-	corePlugins: {
-		aspectRatio: false
-	},
+	// safelist: ['dark'],
+	// corePlugins: {
+	// 	aspectRatio: false
+	// },
 	plugins: [require('@tailwindcss/typography'), require('@tailwindcss/aspect-ratio')],
 	theme: {
 		container: {
