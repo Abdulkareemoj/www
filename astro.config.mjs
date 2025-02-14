@@ -8,7 +8,6 @@ import rehypeUnwrapImages from 'rehype-unwrap-images'
 import expressiveCode from 'astro-expressive-code'
 import { expressiveCodeOptions } from './src/site.config.ts'
 import icon from 'astro-icon'
-import deno from '@deno/astro-adapter'
 
 // https://astro.build/config
 export default defineConfig({
@@ -35,7 +34,5 @@ export default defineConfig({
 			}
 		}
 	},
-	prefetch: true,
-	output: 'server',
-	adapter: deno()
+	prefetch: true
 })
