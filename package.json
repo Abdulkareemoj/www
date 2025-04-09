@@ -8,7 +8,8 @@
 		"build": "astro check && astro build",
 		"preview": "deno run --allow-net --allow-read --allow-env ./dist/server/entry.mjs",
 		"astro": "astro",
-		"lint": "prettier --write  \"**/*.{js,jsx,ts,tsx,md,mdx,svelte,astro}\" && eslint --fix \"src/**/*.{js,ts,jsx,tsx,svelte,astro}\""
+		"lint": "prettier --write  \"**/*.{js,jsx,ts,tsx,md,mdx,svelte,astro}\" && eslint --fix \"src/**/*.{js,ts,jsx,tsx,svelte,astro}\"",
+		"update": "deno run npm:npm-check-updates"
 	},
 	"dependencies": {
 		"@astrojs/check": "^0.9.4",
