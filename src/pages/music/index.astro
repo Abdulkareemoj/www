@@ -3,8 +3,8 @@ import PageLayout from '../../layouts/BaseLayout.astro'
 import PlaylistItem from '../../components/PlaylistItem.astro'
 
 // In a real-world scenario, you'd want to securely manage this key
-const API_KEY = 'AIzaSyAtlYU64G6guwdi3YOlEp9_Ne8WVrJoSYQ'
-const PLAYLIST_ID = 'PL2Xhxab5p6pkDbJ6MeioLf70F2FBEmQLt'
+const API_KEY = process.env.API_KEY
+const PLAYLIST_ID = process.env.PLAYLIST_ID
 
 let playlistItems = [] // Initialize to an empty array
 interface YouTubePlaylistItem {
