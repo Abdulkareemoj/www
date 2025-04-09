@@ -54,12 +54,7 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 <PageLayout meta={{ title: 'Home' }}>
 	<div class='flex w-full flex-col gap-y-10'>
 		<section class='flex flex-col items-center gap-y-7'>
-			<Image
-				src={astro}
-				alt='profile photo'
-				class='h-40 w-auto rounded-full p-2'
-				loading='eager'
-			/>
+			<Image src={astro} alt='profile photo' class='h-40 w-auto rounded-full p-2' loading='eager' />
 
 			<div class='flex flex-col items-center gap-y-4'>
 				<h1 class='text-3xl font-bold'>Hello There!</h1>
@@ -115,8 +110,7 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 		</section>
 
 		<Section title='About'>
-			<p>
-				<small> IPA &nbsp; /ˈwiztek/ — no meaning, I made it up </small>
+			<!-- <p>
 				<br />
 				Hi there, I&apos;m <strong>Abdulkareem</strong> aka
 				<strong>{' '}WiZtEk</strong>. I&apos;m a dude with interests in
@@ -124,14 +118,34 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 				I guess I would describe myself as a Fullstack Developer but that's because I like to understand
 				all parts of a system to know how it works and if possible improve it. I&apos;m mainly into
 				{' '}
-				<strong>Game</strong> and <strong>Web Development</strong>{' '}
+				<strong>Web</strong> and <strong>Game Development</strong>{' '}
 				working with
-				<!-- <a href='http://stride3d.net'>Stride</a>{' '} -->
+				<a href='http://stride3d.net'>Stride</a>{' '}
 				<a href='http://unity3d.com'>Unity3d,</a>{' '}<a href='http://godot.com'>Godot</a>{' '}
 				and<a href='http://blender.org'> Blender</a>, I also use mainly{' '}
 				<strong>NextJS</strong> for web development. I am also proficient with a variety of other frameworks,
 				making me adaptable to diverse project needs.
-			</p>
+			</p> -->
+			<p>
+				<small> IPA &nbsp; /ˈwiztek/ — no meaning, I made it up </small>
+				<br />
+				Hello, I'm <strong>Abdulkareem</strong> (aka <strong>WiZtEk</strong> ). I'm a Fullstack Developer
+				who enjoys creating and improving things. I like to have a complete understanding of a system
+				so I can optimize it. I primarily focus on <strong>Web</strong> and
+				<strong>Game Development</strong>, using technologies such as
+				<strong><a href='http://stride3d.net'>Stride</a></strong>,
+				<strong><a href='http://unity3d.com'>Unity3d</a></strong>,
+				<strong><a href='http://godot.com'>Godot</a></strong>, and
+				<strong><a href='http://blender.org'>Blender.</a></strong>
+		 For web development, I mainly use
+			<strong><a href='http://stride3d.net'>NextJS</a></strong>,
+			<strong><a href='http://stride3d.net'>Sveltekit</a></strong>,
+			<strong><a href='http://stride3d.net'>Node.js</a></strong>,
+<strong><a href='http://stride3d.net'>Express.js</a></strong>,
+			<strong><a href='http://stride3d.net'>Deno </a></strong>and a bunch of other stuff mainly in
+			the Javascript Ecosystem, also trying stuff in <strong>C#</strong> . I'm comfortable with numerous other
+			frameworks, making me a versatile developer.
+	</p>
 			<!-- 			
 			<p class='mb-4'>
 				Right now I&apos;m working on{' '}
