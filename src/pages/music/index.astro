@@ -5,7 +5,6 @@ import PlaylistItem from '../../components/PlaylistItem.astro'
 // In a real-world scenario, you'd want to securely manage this key
 const API_KEY = process.env.API_KEY
 const PLAYLIST_ID = process.env.PLAYLIST_ID
-
 let playlistItems = [] // Initialize to an empty array
 interface YouTubePlaylistItem {
 	snippet: {
