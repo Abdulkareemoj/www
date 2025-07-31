@@ -1,0 +1,195 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@plugin "@tailwindcss/typography";
+
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
+  }
+}
+
+@layer utilities {
+  @font-face {
+    font-family: "Satoshi";
+    src: url("/fonts/Satoshi-Variable.ttf");
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "Satoshi";
+    src: url("/fonts/Satoshi-VariableItalic.ttf");
+    font-style: italic;
+    font-display: swap;
+  }
+}
+
+@layer base {
+  :root {
+    /* OKLCH format: oklch(lightness chroma hue) */
+    --background: oklch(0.9 0.02 240);
+    --foreground: oklch(0.15 0.01 240);
+    --card: oklch(1 0 0);
+    --card-foreground: oklch(0.15 0.01 240);
+    --popover: oklch(1 0 0);
+    --popover-foreground: oklch(0.15 0.01 240);
+    --primary: oklch(0.2 0.01 240);
+    --primary-foreground: oklch(0.98 0 0);
+    --secondary: oklch(0.96 0.01 240);
+    --secondary-foreground: oklch(0.2 0.01 240);
+    --muted: oklch(0.96 0.01 240);
+    --muted-foreground: oklch(0.5 0.01 240);
+    --accent: oklch(0.96 0.01 240);
+    --accent-foreground: oklch(0.2 0.01 240);
+    --destructive: oklch(0.6 0.2 0);
+    --destructive-foreground: oklch(0.98 0 0);
+    --border: oklch(0.9 0.01 240);
+    --input: oklch(0.9 0.01 240);
+    --ring: oklch(0.2 0.01 240);
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: oklch(19.125% 0.00002 271.152);
+    --foreground: oklch(0.98 0 0);
+    --card: oklch(0.04 0.01 240);
+    --card-foreground: oklch(0.98 0 0);
+    --popover: oklch(0.04 0.01 240);
+    --popover-foreground: oklch(0.98 0 0);
+    --primary: oklch(0.98 0 0);
+    --primary-foreground: oklch(0.2 0.01 240);
+    --secondary: oklch(0.16 0.01 240);
+    --secondary-foreground: oklch(0.98 0 0);
+    --muted: oklch(0.16 0.01 240);
+    --muted-foreground: oklch(0.65 0.01 240);
+    --accent: oklch(0.16 0.01 240);
+    --accent-foreground: oklch(0.98 0 0);
+    --destructive: oklch(0.4 0.15 0);
+    --destructive-foreground: oklch(0.98 0 0);
+    --border: oklch(0.16 0.01 240);
+    --input: oklch(0.16 0.01 240);
+    --ring: oklch(0.84 0.01 240);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@theme inline {
+  /* Container settings */
+  --container-center: true;
+  --container-padding: 2rem;
+  --breakpoint-2xl: 1400px;
+
+  /* Border radius */
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+
+  /* Colors - OKLCH format with alpha support */
+  --color-border: var(--background);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+
+  /* Font families */
+  --font-satoshi: "Satoshi", ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer components {
+  .custom-prose {
+    @apply text-foreground;
+    max-width: 65ch;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      @apply text-foreground font-bold;
+    }
+
+    h1 {
+      @apply text-4xl mb-4;
+    }
+    h2 {
+      @apply text-3xl mb-3;
+    }
+    h3 {
+      @apply text-2xl mb-3;
+    }
+    h4 {
+      @apply text-xl mb-2;
+    }
+
+    p {
+      @apply text-foreground mb-4 leading-relaxed;
+    }
+
+    a {
+      @apply text-primary hover:underline;
+    }
+
+    strong,
+    b {
+      @apply text-foreground font-semibold;
+    }
+
+    code {
+      @apply text-foreground bg-muted px-1 py-0.5 rounded text-sm;
+    }
+
+    pre {
+      @apply bg-muted text-foreground p-4 rounded-lg overflow-x-auto;
+    }
+
+    blockquote {
+      @apply border-l-4 border-border pl-4 text-muted-foreground italic;
+    }
+
+    ul,
+    ol {
+      @apply text-foreground mb-4 pl-6;
+    }
+
+    li {
+      @apply mb-1;
+    }
+
+    hr {
+      @apply border-border my-6;
+    }
+  }
+}

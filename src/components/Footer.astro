@@ -1,14 +1,14 @@
 ---
-import { siteConfig } from '@site.config'
+import { siteConfig } from "@site.config";
 ---
 
-<footer class='mx-auto mt-24 w-full'>
-	<div class='border-border border-t pt-5'>
-		<div
-			class='flex flex-col items-center gap-y-3 sm:flex sm:flex-row sm:items-center sm:justify-between sm:gap-y-0'
-		>
-			<div class='flex gap-x-4 text-sm'>
-				<!-- <a
+<footer class="mx-auto mt-24 w-full">
+  <div class="border-border border-t pt-5">
+    <div
+      class="flex flex-col items-center gap-y-3 sm:flex sm:flex-row sm:items-center sm:justify-between sm:gap-y-0"
+    >
+      <div class="flex gap-x-4 text-sm">
+        <!-- <a
           class='inline-flex gap-x-2 text-gray-600 hover:text-gray-800 dark:focus:outline-hidden dark:focus:ring-1 dark:focus:ring-gray-600'
           href='/terms'>Terms</a
         >
@@ -17,106 +17,136 @@ import { siteConfig } from '@site.config'
           class='inline-flex gap-x-2 text-gray-600 hover:text-gray-800 dark:focus:outline-hidden dark:focus:ring-1 dark:focus:ring-gray-600'
           href='/privacy'>Privacy</a
         > -->
-				<p class=''>© {new Date().getFullYear()} WiZtEk. All rights reserved.</p>
-			</div>
+        <p class="">
+          © {new Date().getFullYear()} WiZtEk. All rights reserved.
+        </p>
+      </div>
 
-			<div class='flex items-center justify-between'>
-				<!-- Social Brands -->
-				<div class='flex items-center gap-x-2'>
-					<!-- Rss -->
-					<a class='hover:text-muted-foreground/75 inline-block transition-all' href='/rss.xml'>
-						<svg xmlns='http://www.w3.org/2000/svg' width='1em' height='1em' viewBox='0 0 24 24'>
-							<path
-								fill='none'
-								stroke='currentColor'
-								stroke-linecap='round'
-								stroke-linejoin='round'
-								stroke-width='2'
-								d='M4 19a1 1 0 1 0 2 0a1 1 0 1 0-2 0M4 4a16 16 0 0 1 16 16M4 11a9 9 0 0 1 9 9'
-							></path>
-						</svg>
-					</a>
-					<!-- Sitemap -->
-					<a
-						class='hover:text-muted-foreground/75 inline-block transition-all'
-						href='/sitemap-index.xml'
-					>
-						<svg xmlns='http://www.w3.org/2000/svg' width='1em' height='1em' viewBox='0 0 24 24'>
-							<path
-								fill='none'
-								stroke='currentColor'
-								stroke-linecap='round'
-								stroke-linejoin='round'
-								stroke-width='2'
-								d='M3 17a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2zm12 0a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2h-2a2 2 0 0 1-2-2zM9 5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2h-2a2 2 0 0 1-2-2zM6 15v-1a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v1m-6-6v3'
-							></path>
-						</svg>
-					</a>
-					<!-- Email -->
-					<a
-						class='hover:text-muted-foreground/75 inline-block transition-all'
-						href=`mailto:${siteConfig.email}`
-					>
-						<svg xmlns='http://www.w3.org/2000/svg' width='1em' height='1em' viewBox='0 0 32 32'>
-							<path
-								fill='currentColor'
-								d='M28 6H4a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h24a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2m-2.2 2L16 14.78L6.2 8ZM4 24V8.91l11.43 7.91a1 1 0 0 0 1.14 0L28 8.91V24Z'
-							></path>
-						</svg>
-					</a>
-					<!-- Linkedin -->
-					<a
-						class='hover:text-muted-foreground/75 inline-block transition-all'
-						href='https://www.linkedin.com/in/example/'
-					>
-						<svg
-							class='h-4 w-4 shrink-0'
-							xmlns='http://www.w3.org/2000/svg'
-							width='1em'
-							height='1em'
-							viewBox='0 0 16 16'
-							><path
-								fill='currentColor'
-								d='M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248c-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586c.173-.431.568-.878 1.232-.878c.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252c-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z'
-							></path></svg
-						>
-					</a>
-					<!-- Github -->
-					<a
-						class='hover:text-muted-foreground/75 inline-block transition-all'
-						href='https://www.github.com/abdulkareemoj/'
-					>
-						<svg xmlns='http://www.w3.org/2000/svg' width='1em' height='1em' viewBox='0 0 24 24'>
-							<g
-								fill='none'
-								stroke='currentColor'
-								stroke-linecap='round'
-								stroke-linejoin='round'
-								stroke-width='2'
-							>
-								<path
-									d='M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5c.08-1.25-.27-2.48-1-3.5c.28-1.15.28-2.35 0-3.5c0 0-1 0-3 1.5c-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.4 5.4 0 0 0 4 9c0 3.5 3 5.5 6 5.5c-.39.49-.68 1.05-.85 1.65S8.93 17.38 9 18v4'
-								></path>
-								<path d='M9 18c-4.51 2-5-2-7-2'></path>
-							</g>
-						</svg>
-					</a>
+      <div class="flex items-center justify-between">
+        <!-- Social Brands -->
+        <div class="flex items-center gap-x-2">
+          <!-- Rss -->
+          <a
+            class="hover:text-muted-foreground/75 inline-block transition-all"
+            href="/rss.xml"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="1em"
+              height="1em"
+              viewBox="0 0 24 24"
+            >
+              <path
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 19a1 1 0 1 0 2 0a1 1 0 1 0-2 0M4 4a16 16 0 0 1 16 16M4 11a9 9 0 0 1 9 9"
+              ></path>
+            </svg>
+          </a>
+          <!-- Sitemap -->
+          <a
+            class="hover:text-muted-foreground/75 inline-block transition-all"
+            href="/sitemap-index.xml"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="1em"
+              height="1em"
+              viewBox="0 0 24 24"
+            >
+              <path
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M3 17a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2zm12 0a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2h-2a2 2 0 0 1-2-2zM9 5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2h-2a2 2 0 0 1-2-2zM6 15v-1a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v1m-6-6v3"
+              ></path>
+            </svg>
+          </a>
+          <!-- Email -->
+          <a
+            class="hover:text-muted-foreground/75 inline-block transition-all"
+            href=`mailto:${siteConfig.email}`
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="1em"
+              height="1em"
+              viewBox="0 0 32 32"
+            >
+              <path
+                fill="currentColor"
+                d="M28 6H4a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h24a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2m-2.2 2L16 14.78L6.2 8ZM4 24V8.91l11.43 7.91a1 1 0 0 0 1.14 0L28 8.91V24Z"
+              ></path>
+            </svg>
+          </a>
+          <!-- Linkedin -->
+          <a
+            class="hover:text-muted-foreground/75 inline-block transition-all"
+            href="https://www.linkedin.com/in/abdulkareem-ojerinde/"
+          >
+            <svg
+              class="h-4 w-4 shrink-0"
+              xmlns="http://www.w3.org/2000/svg"
+              width="1em"
+              height="1em"
+              viewBox="0 0 16 16"
+              ><path
+                fill="currentColor"
+                d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248c-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586c.173-.431.568-.878 1.232-.878c.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252c-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"
+              ></path></svg
+            >
+          </a>
+          <!-- Github -->
+          <a
+            class="hover:text-muted-foreground/75 inline-block transition-all"
+            href="https://www.github.com/abdulkareemoj/"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="1em"
+              height="1em"
+              viewBox="0 0 24 24"
+            >
+              <g
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              >
+                <path
+                  d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5c.08-1.25-.27-2.48-1-3.5c.28-1.15.28-2.35 0-3.5c0 0-1 0-3 1.5c-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.4 5.4 0 0 0 4 9c0 3.5 3 5.5 6 5.5c-.39.49-.68 1.05-.85 1.65S8.93 17.38 9 18v4"
+                ></path>
+                <path d="M9 18c-4.51 2-5-2-7-2"></path>
+              </g>
+            </svg>
+          </a>
 
-					<!-- Twitter -->
-					<a
-						class='hover:text-muted-foreground/75 inline-block transition-all'
-						href='https://www.x.com/abdulkareemoj/'
-					>
-						<svg xmlns='http://www.w3.org/2000/svg' width='1em' height='1em' viewBox='0 0 24 24'>
-							<path
-								fill='currentColor'
-								d='m17.687 3.063l-4.996 5.711l-4.32-5.711H2.112l7.477 9.776l-7.086 8.099h3.034l5.469-6.25l4.78 6.25h6.102l-7.794-10.304l6.625-7.571zm-1.064 16.06L5.654 4.782h1.803l10.846 14.34z'
-							></path>
-						</svg>
-					</a>
-				</div>
-				<!-- End Social Brands -->
-			</div>
-		</div>
-	</div>
+          <!-- Twitter -->
+          <a
+            class="hover:text-muted-foreground/75 inline-block transition-all"
+            href="https://www.x.com/abdulkareemoj/"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="1em"
+              height="1em"
+              viewBox="0 0 24 24"
+            >
+              <path
+                fill="currentColor"
+                d="m17.687 3.063l-4.996 5.711l-4.32-5.711H2.112l7.477 9.776l-7.086 8.099h3.034l5.469-6.25l4.78 6.25h6.102l-7.794-10.304l6.625-7.571zm-1.064 16.06L5.654 4.782h1.803l10.846 14.34z"
+              ></path>
+            </svg>
+          </a>
+        </div>
+        <!-- End Social Brands -->
+      </div>
+    </div>
+  </div>
 </footer>
