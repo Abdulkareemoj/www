@@ -1,5 +1,5 @@
 ---
-company: 'Ghana Music Live'
+company: 'Musiga'
 role: 'Backend Developer'
 dateStart: '12/01/2022'
 dateEnd: '03/01/2023'

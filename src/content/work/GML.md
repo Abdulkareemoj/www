@@ -1,5 +1,5 @@
 ---
-company: "Ghana Music Live"
+company: "Musiga"
 role: "Frontend Developer"
 dateStart: "03/01/2023"
 dateEnd: '"09/01/2023"'
