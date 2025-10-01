@@ -30,7 +30,7 @@
 @layer base {
   :root {
     /* OKLCH format: oklch(lightness chroma hue) */
-    --background: oklch(0.9 0.02 240);
+    --background: oklch(82.032% 0.00009 271.152);
     --foreground: oklch(0.15 0.01 240);
     --card: oklch(1 0 0);
     --card-foreground: oklch(0.15 0.01 240);
