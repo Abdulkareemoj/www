@@ -4,7 +4,7 @@ description: 'SaaS app providing comprehensive suite of tools for image editing,
 date: 'Mar 26 2024'
 demoURL: 'https://#'
 repoURL: 'https://github.com/Abdulkareemoj/imgsaas'
-imageUrl: 'https://www.pexels.com/photo/beautiful-grey-headed-yellow-finch-on-wooden-perch-29796580/'
+imageUrl: 'https://res.cloudinary.com/dcc1yy1zv/image/upload/v1759321227/www/Screenshot_2025-09-30_at_22-21-44_gfkzpc.png'
 altText: 'Alt text for image'
 ---
 

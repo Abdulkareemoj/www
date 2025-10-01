@@ -1,18 +1,18 @@
 ---
-title: 'Task'
-description: 'Fintech app dashboard frontend'
-date: 'Mar 26 2024'
-demoURL: 'https://#'
-repoURL: 'https://github.com/Abdulkareemoj/task'
-imageUrl: 'https://www.pexels.com/photo/beautiful-grey-headed-yellow-finch-on-wooden-perch-29796580/'
-altText: 'Alt text for image'
+title: "Task"
+description: "Fintech app dashboard frontend"
+date: "Mar 26 2024"
+demoURL: "https://#"
+repoURL: "https://github.com/Abdulkareemoj/task"
+imageUrl: "https://res.cloudinary.com/dcc1yy1zv/image/upload/v1759321228/www/Screenshot_2025-09-30_at_22-23-27_Task_tvjd1o.png"
+altText: "Alt text for image"
 ---
+
 # Task Dashboard
 
 ![Task Dashboard](https://fobework-task.vercel.app/)
 
 A modern, responsive dashboard application built with Next.js, featuring comprehensive financial management tools, dark/light mode, and robust state management.
-Assessment for Frontend Developer at Fobework.
 
 ## 🌟 Features
 

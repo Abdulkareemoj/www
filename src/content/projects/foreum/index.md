@@ -4,7 +4,7 @@ description: 'A powerful, modern forum platform built with SvelteKit, tRPC, and 
 date: 'Mar 26 2024'
 demoURL: 'https://#'
 repoURL: 'https://github.com/Abdulkareemoj/foreum'
-imageUrl: 'https://www.pexels.com/photo/beautiful-grey-headed-yellow-finch-on-wooden-perch-29796580/'
+imageUrl: 'https://res.cloudinary.com/dcc1yy1zv/image/upload/v1759321228/www/Screenshot_2025-09-30_at_21-58-49_Foreum_-_Modern_Forum_Platform_for_Your_Website_scnops.png'
 altText: 'Alt text for image'
 ---
 

@@ -4,7 +4,7 @@ description: 'E-commerce website built with Next.js, featuring a custom Content 
 date: 'Mar 26 2024'
 demoURL: 'https://#'
 repoURL: 'https://github.com/Abdulkareemoj/Next-Store'
-imageUrl: 'https://res.cloudinary.com/dcc1yy1zv/image/upload/v1739523366/www/mfxxa2cndnni7vmmb4os.jpg'
+imageUrl: 'https://res.cloudinary.com/dcc1yy1zv/image/upload/v1759321226/www/Screenshot_2025-09-30_at_22-17-21_q1ciwp.png'
 altText: 'Alt text for image'
 ---
 

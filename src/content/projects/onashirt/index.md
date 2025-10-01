@@ -1,10 +1,10 @@
 ---
 title: 'onashirt'
-description: ''
+description: 'Full-stack web app built with Next.js that allows users to customize a 3D model of a t-shirt and visualize the changes in real-time.'
 date: 'Mar 26 2024'
 demoURL: 'https://#'
 repoURL: 'https://github.com/Abdulkareemoj/shirt'
-imageUrl: 'https://www.pexels.com/photo/beautiful-grey-headed-yellow-finch-on-wooden-perch-29796580/'
+imageUrl: 'https://res.cloudinary.com/dcc1yy1zv/image/upload/v1759321229/www/Screenshot_2025-09-30_at_21-56-08_u10swc.png'
 altText: 'Alt text for image'
 ---
 

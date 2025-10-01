@@ -4,7 +4,7 @@ description: 'Containerized setup for both frontend and backend using React and 
 date: 'Mar 18 2024'
 demoURL: 'https://'
 repoURL: 'https://github.com/Abdulkareemoj/node-react-ts-docker'
-imageUrl: 'https://res.cloudinary.com/dcc1yy1zv/image/upload/v1739475016/www/dqrdgzdfmhjiyoij6uiy.jpg'
+imageUrl: 'https://res.cloudinary.com/dcc1yy1zv/image/upload/v1759321228/www/Screenshot_2025-09-30_at_22-13-14_Create_TanStack_App_-_node-client_a5xsa8.png'
 altText: 'Alt text for image'
 ---
 
