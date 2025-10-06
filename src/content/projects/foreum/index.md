@@ -1,22 +1,16 @@
 ---
-title: 'Foreum'
-description: 'A powerful, modern forum platform built with SvelteKit, tRPC, and Drizzle ORM — designed for both developers and community managers.'
-date: 'Mar 26 2024'
-demoURL: 'https://#'
-repoURL: 'https://github.com/Abdulkareemoj/foreum'
-imageUrl: 'https://res.cloudinary.com/dcc1yy1zv/image/upload/v1759321228/www/Screenshot_2025-09-30_at_21-58-49_Foreum_-_Modern_Forum_Platform_for_Your_Website_scnops.png'
-altText: 'Alt text for image'
+title: "Foreum"
+description: "A powerful, modern forum platform built with SvelteKit, tRPC, and Drizzle ORM — designed for both developers and community managers."
+date: "Mar 26 2024"
+demoURL: "https://foreum.vercel.app/"
+repoURL: "https://github.com/Abdulkareemoj/foreum"
+imageUrl: "https://res.cloudinary.com/dcc1yy1zv/image/upload/v1759321228/www/Screenshot_2025-09-30_at_21-58-49_Foreum_-_Modern_Forum_Platform_for_Your_Website_scnops.png"
+altText: "Alt text for image"
 ---
 
 # Foreum 🚀
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
-
-
-## 🌟 Why Foreum?
-
-Foreum is your all-in-one solution for building engaging community spaces. Whether you're creating a product support forum, an internal discussion board, or a vibrant community platform, Foreum provides everything you need out of the box:
+Foreum is an all-in-one solution for building engaging community spaces. Whether you're creating a product support forum, an internal discussion board, or a vibrant community platform, Foreum provides everything you need out of the box:
 
 - 🔒 **Enterprise-grade Authentication** with Better Auth
 - 🎨 **Beautiful UI** powered by shadcn-svelte components
@@ -30,11 +24,13 @@ Foreum is your all-in-one solution for building engaging community spaces. Wheth
 ### Core Features
 
 - 🔐 **Advanced Authentication**
+
   - Email/Password with username support
   - Email verification & password reset
   - OAuth/SSO integration ready
 
 - 📝 **Rich Discussion Tools**
+
   - Markdown/Rich text editor
   - Thread categories and tags
   - Upvotes and reactions
@@ -49,6 +45,7 @@ Foreum is your all-in-one solution for building engaging community spaces. Wheth
 ### Technical Features
 
 - ⚡ **Performance-First Architecture**
+
   - Server-side rendering with SvelteKit
   - Type-safe APIs with tRPC
   - Efficient database queries with Drizzle ORM
@@ -72,4 +69,3 @@ Foreum can be used for:
 - A feature-rich comment + discussion layer for an existing app.
 - An MVP for social/community features when validating product-market fit.
 - A teaching template for modern full-stack SvelteKit + tRPC apps.
-
