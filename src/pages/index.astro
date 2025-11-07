@@ -1,80 +1,94 @@
 ---
-import PageLayout from '@/layouts/BaseLayout.astro'
-import Section from '@/components/Section.astro'
-import Card from '@/components/Card.astro'
-import ProjectCard from '@/components/ProjectCard.astro'
-import Label from '@/components/Label.astro'
-import SkillLayout from '@/components/SkillLayout.astro'
-import PostPreview from '@/components/PostPreview.astro'
+import PageLayout from "@/layouts/BaseLayout.astro";
+import Section from "@/components/Section.astro";
+import Card from "@/components/Card.astro";
+import ProjectCard from "@/components/ProjectCard.astro";
+import Label from "@/components/Label.astro";
+import SkillLayout from "@/components/SkillLayout.astro";
+import PostPreview from "@/components/PostPreview.astro";
 
-import { Image } from 'astro:assets'
-import astro from '@/assets/social-card.png'
+import { Image } from "astro:assets";
+import astro from "@/assets/social-card.png";
 
-import { getAllPosts, sortMDByDate } from '@/utils'
-import Button from '@/components/Button.astro'
-import Link from '@/components/Link.astro'
+import { getAllPosts, sortMDByDate } from "@/utils";
+import Button from "@/components/Button.astro";
+import Link from "@/components/Link.astro";
 
-const languages = ['Javascript/Typescript', 'C',  'PHP', 'C#', 'Bash']
+const languages = ["Javascript/Typescript", "C", "PHP", "C#", "Bash"];
 const frontend = [
-	'HTML',
-	'CSS',
-	'SASS',
-	'TailwindCSS',
-	'Boostrap',
-	'Fresh',
-	'React',
-	'Astro',
-	'Markdown'
-]
-const backend = ['Node.js', 'NextJS', 'Deno', 'GraphQL', 'MongoDB', 'MySQL', 'PostgreSQL']
+  "HTML",
+  "CSS",
+  "SASS",
+  "TailwindCSS",
+  "Boostrap",
+  "Fresh",
+  "React",
+  "Astro",
+  "Markdown",
+];
+const backend = [
+  "Node.js",
+  "NextJS",
+  "Deno",
+  "GraphQL",
+  "MongoDB",
+  "MySQL",
+  "PostgreSQL",
+];
 const others = [
-	'AWS',
-	'GCP',
-	'DevOps',
-	'Blender',
-	'Unity',
-	'Stride3d',
-	'Git',
-	'CI/CD',
-	'Godot',
-	'JAMStack',
-'Tanstack',
-'SWR',
-'Zustand',
+  "AWS",
+  "GCP",
+  "DevOps",
+  "Blender",
+  "Unity",
+  "Stride3d",
+  "Git",
+  "CI/CD",
+  "Godot",
+  "JAMStack",
+  "Tanstack",
+  "SWR",
+  "Zustand",
 
-	'Websockets',
-	'WebRTC',
-	'CMS Integration',
-	'API Design'
-]
-const mobile = ['Flutter', 'React Native']
+  "Websockets",
+  "WebRTC",
+  "CMS Integration",
+  "API Design",
+];
+const mobile = ["Flutter", "React Native"];
 
-const MAX_POSTS = 10
-const allPosts = await getAllPosts()
-const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
+const MAX_POSTS = 10;
+const allPosts = await getAllPosts();
+const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 ---
 
-<PageLayout meta={{ title: 'Home' }}>
-	<div class='flex w-full flex-col gap-y-10'>
-		<section class='flex flex-col items-center gap-y-7'>
-			<Image src={astro} alt='profile photo' class='h-40 w-auto rounded-full p-2' loading='eager' />
+<PageLayout meta={{ title: "Home" }}>
+  <div class="flex w-full flex-col gap-y-10">
+    <section class="flex flex-col items-center gap-y-7">
+      <Image
+        src={astro}
+        alt="profile photo"
+        class="h-40 w-auto rounded-full p-2"
+        loading="eager"
+      />
 
-			<div class='flex flex-col items-center gap-y-4'>
-				<h1 class='text-3xl font-bold'>Hello There!</h1>
-				<a
-					href='https://github.com/abdulkareemoj'
-					class='border-input flex flex-row items-center gap-x-3 rounded-3xl border px-4 py-2 text-sm shadow-xs transition-all hover:shadow-md'
-				>
-					<span class='relative flex items-center justify-center'>
-						<span
-							class='absolute inline-flex h-2 w-2 animate-ping rounded-full border border-green-400 bg-green-400 opacity-75'
-						></span>
-						<span class='relative inline-flex h-2 w-2 rounded-full bg-green-400'></span>
-					</span>
+      <div class="flex flex-col items-center gap-y-4">
+        <h1 class="text-3xl font-bold">Hello There!</h1>
+        <a
+          href="https://github.com/abdulkareemoj"
+          class="border-input flex flex-row items-center gap-x-3 rounded-3xl border px-4 py-2 text-sm shadow-xs transition-all hover:shadow-md"
+        >
+          <span class="relative flex items-center justify-center">
+            <span
+              class="absolute inline-flex h-2 w-2 animate-ping rounded-full border border-green-400 bg-green-400 opacity-75"
+            ></span>
+            <span class="relative inline-flex h-2 w-2 rounded-full bg-green-400"
+            ></span>
+          </span>
 
-					<p class='font-medium'>Available</p>
-				</a>
-				<!-- <div class='flex flex-wrap justify-center gap-x-7 gap-y-3'>
+          <p class="font-medium">Available</p>
+        </a>
+        <!-- <div class='flex flex-wrap justify-center gap-x-7 gap-y-3'>
 					<Label title='Lorem Ipsum'>
 						<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' class='h-5 w-5' slot='icon'
 							><path
@@ -109,94 +123,151 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 						>
 					</Label>
 				</div> -->
-			</div>
-		</section>
+      </div>
+    </section>
 
-		<Section title='About'>
-		
-			<p>
-				<small> IPA &nbsp; /ˈwiztek/ — no meaning, I made it up </small>
-				<br />
-				Hi, I'm <strong>Abdulkareem</strong> (aka <strong>WiZtEk</strong> ). I'm a Fullstack Developer
-				who enjoys creating and improving things. I like to have a complete understanding of a system
-				so I can optimize it. I primarily focus on <strong>Web</strong> and
-				<strong>Game Development</strong>, using technologies such as
-				<strong><a class="hover:underline" href='http://stride3d.net'>Stride</a></strong>,
-				<strong><a class="hover:underline" href='http://unity3d.com'>Unity3d</a></strong>,
-				<strong><a class="hover:underline" href='http://godot.com'>Godot</a></strong>, and
-				<strong><a class="hover:underline" href='http://blender.org'>Blender.</a></strong>
-		 For web development, I mainly use
-			<strong><a class="hover:underline" href='http://stride3d.net'>NextJS</a></strong>,
-			<strong><a class="hover:underline" href='http://stride3d.net'>Sveltekit</a></strong>,
-			<strong><a class="hover:underline" href='http://stride3d.net'>Node.js</a></strong>,
-<strong><a class="hover:underline" href='http://stride3d.net'>Express.js</a></strong>,
-			<strong><a class="hover:underline" href='http://stride3d.net'>Deno </a></strong>and a bunch of other stuff mainly in
-			the Javascript Ecosystem, also trying stuff in <strong>C#</strong> . I'm comfortable with numerous other
-			frameworks, making me a versatile developer.
-	</p>
-						
-			<p class='mb-4'>
-				Right now I&apos;m working on
-				<strong>
-					<a href='https://github.com/foreum' target='_blank'class="hover:underline" > Foreum,	</strong> </a> a self hostable all-in-one solution for building engaging community spaces. Whether you're creating a product support forum, an internal discussion board, or a vibrant community platform.
-			
-				
-			</p>
-		</Section>
-		<Section title='Projects'>
-			<div class='flex flex-col gap-y-3 sm:flex-row sm:gap-x-3 sm:gap-y-0'>
-				<ProjectCard
-					href='/projects/task '
-					heading='Task Fintech app Dashboard'
-					subheading=' A modern, responsive dashboard application built with NextJS'
-					imagePath='https://res.cloudinary.com/dcc1yy1zv/image/upload/v1759321228/www/Screenshot_2025-09-30_at_22-23-27_Task_tvjd1o.png'
-					altText='Example'
-					class='w-full sm:w-1/2'
-				/>
-				<ProjectCard
-					href='/projects/salesmanapp'
-					heading='SalesManApp '
-					subheading='A Sales/CRM app built with Nextjs using the App Router and Supabase.'
-					imagePath='https://res.cloudinary.com/dcc1yy1zv/image/upload/v1759321225/www/Screenshot_2025-09-30_at_22-09-54_SalesCRM_-_Boost_Your_Sales_with_Smart_CRM_abgs0e.png'
-					altText='Example'
-					class='w-full sm:w-1/2'
-				/>
+    <Section title="About">
+      <p>
+        <small> IPA &nbsp; /ˈwiztek/ — no meaning, I made it up </small>
+        <br />
+        Hi, I'm <strong>Abdulkareem</strong> (aka <strong>WiZtEk</strong> ). I'm
+        a Fullstack Developer who enjoys creating and improving things. I like to
+        have a complete understanding of a system so I can optimize it. I primarily
+        focus on <strong>Web</strong> and
+        <strong>Game Development</strong>, using technologies such as
+        <strong
+          ><a class="hover:underline" href="https://www.unrealengine.com/"
+            >Unreal Engine</a
+          ></strong
+        >,
+        <strong
+          ><a class="hover:underline" href="http://unity3d.com">Unity3d</a
+          ></strong
+        >,
+        <strong
+          ><a class="hover:underline" href="http://godot.com">Godot</a></strong
+        >, and
+        <strong
+          ><a class="hover:underline" href="http://blender.org">Blender.</a
+          ></strong
+        >
+        For web development, I mainly use
+        <strong
+          ><a class="hover:underline" href="http://nextjs.org">NextJS</a
+          ></strong
+        >,
+        <strong
+          ><a class="hover:underline" href="http://kit.svelte.dev">Sveltekit</a
+          ></strong
+        >,
+        <strong
+          ><a class="hover:underline" href="http://nodejs.org">Node.js</a
+          ></strong
+        >,
+        <strong
+          ><a class="hover:underline" href="http://hono.dev">honojs</a></strong
+        >,
+        <strong
+          ><a class="hover:underline" href="www.expressjs.com">Express.js</a
+          ></strong
+        >,
+        <strong
+          ><a class="hover:underline" href="http://deno.com">Deno </a></strong
+        >and a bunch of other stuff mainly in the Javascript Ecosystem, also
+        trying stuff in <strong>C#</strong> especially <strong
+          ><a
+            class="hover:underline"
+            href="http://https://dotnet.microsoft.com/en-us/apps/aspnet"
+            >ASP.NET</a
+          ></strong
+        >. I'm comfortable with numerous other frameworks, making me a versatile
+        developer.
+      </p>
 
-				<ProjectCard
-					href='/projects/onashirt'
-					heading='onashirt'
-					subheading='Full-stack web app built with Next.js that allows users to customize a 3D model of a t-shirt and visualize the changes in real-time.'
-					imagePath='https://res.cloudinary.com/dcc1yy1zv/image/upload/v1759321229/www/Screenshot_2025-09-30_at_21-56-08_u10swc.png'
-					altText='Example'
-					class='w-full sm:w-1/2'
-				/>
-				<ProjectCard
-					href='/projects/node-react-ts-docker'
-					heading='node-react-ts-docker'
-					subheading='Containerized setup for both frontend and backend using React and Node.js'
-					imagePath='https://res.cloudinary.com/dcc1yy1zv/image/upload/v1759321228/www/Screenshot_2025-09-30_at_22-13-14_Create_TanStack_App_-_node-client_a5xsa8.png'
-					altText='Lorem, ipsum dolor sit'
-					class='w-full sm:w-1/2'
-				/>
-			</div>
-		</Section><Link href='/projects'> All projects →</Link>
-		{
-			allPostsByDate.length > 0 && (
-				<>
-					<Section title='Posts'>
-						<ul class='flex flex-col gap-y-2'>
-							{allPostsByDate.map((p) => (
-								<li class='flex flex-col gap-x-2 sm:flex-row'>
-									<PostPreview post={p} />
-								</li>
-							))}
-						</ul>
-					</Section>
-					<Link href='/blog'>All posts →</Link>
-				</>
-			)
-		}
-		<!-- 
+      <p class="mb-4">
+        Right now I&apos;m working on
+        <strong>
+          <a
+            href="https://foreum.vercel.app/"
+            target="_blank"
+            class="hover:underline"
+          >
+            Foreum,
+          </a>
+        </strong> a self hostable all-in-one solution for building engaging community
+        spaces,  <strong>
+          <a
+            href="https://github.com/abdulkareemoj/freader"
+            target="_blank"
+            class="hover:underline"
+          >
+            freader,
+          </a>
+        </strong> a Multi platform ebook reader built with <a
+          href="https://avaloniaui.net/"
+          target="_blank"
+          class="hover:underline"
+        >
+        <strong> AvaloniaUI,</strong> 
+        </a>
+      for desktop and mobile devices and also a <strong> Bookmark Manager</strong>  and<strong>  RSS Reader</strong> tool
+      in one </p>
+    </Section>
+  </div>
+  <Section title="Projects">
+    <div class="flex flex-col gap-y-3 sm:flex-row sm:gap-x-3 sm:gap-y-0">
+      <ProjectCard
+        href="/projects/task "
+        heading="Task Fintech app Dashboard"
+        subheading=" A modern, responsive dashboard application built with NextJS"
+        imagePath="https://res.cloudinary.com/dcc1yy1zv/image/upload/v1759321228/www/Screenshot_2025-09-30_at_22-23-27_Task_tvjd1o.png"
+        altText="Example"
+        class="w-full sm:w-1/2"
+      />
+      <ProjectCard
+        href="/projects/salesmanapp"
+        heading="SalesManApp "
+        subheading="A Sales/CRM app built with Nextjs using the App Router and Supabase."
+        imagePath="https://res.cloudinary.com/dcc1yy1zv/image/upload/v1759321225/www/Screenshot_2025-09-30_at_22-09-54_SalesCRM_-_Boost_Your_Sales_with_Smart_CRM_abgs0e.png"
+        altText="Example"
+        class="w-full sm:w-1/2"
+      />
+
+      <ProjectCard
+        href="/projects/onashirt"
+        heading="onashirt"
+        subheading="Full-stack web app built with Next.js that allows users to customize a 3D model of a t-shirt and visualize the changes in real-time."
+        imagePath="https://res.cloudinary.com/dcc1yy1zv/image/upload/v1759321229/www/Screenshot_2025-09-30_at_21-56-08_u10swc.png"
+        altText="Example"
+        class="w-full sm:w-1/2"
+      />
+      <ProjectCard
+        href="/projects/node-react-ts-docker"
+        heading="node-react-ts-docker"
+        subheading="Containerized setup for both frontend and backend using React and Node.js"
+        imagePath="https://res.cloudinary.com/dcc1yy1zv/image/upload/v1759321228/www/Screenshot_2025-09-30_at_22-13-14_Create_TanStack_App_-_node-client_a5xsa8.png"
+        altText="Lorem, ipsum dolor sit"
+        class="w-full sm:w-1/2"
+      />
+    </div>
+  </Section><Link href="/projects"> All projects →</Link>
+  {
+    allPostsByDate.length > 0 && (
+      <>
+        <Section title="Posts">
+          <ul class="flex flex-col gap-y-2">
+            {allPostsByDate.map((p) => (
+              <li class="flex flex-col gap-x-2 sm:flex-row">
+                <PostPreview post={p} />
+              </li>
+            ))}
+          </ul>
+        </Section>
+        <Link href="/blog">All posts →</Link>
+      </>
+    )
+  }
+  <!-- 
 		<Section title='Experience'>
 			<Card
 				heading='Lorem Ipsum'
@@ -225,7 +296,7 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 			/>
 		</Section> -->
 
-		<!-- <Section title='Education'>
+  <!-- <Section title='Education'>
 			<Card
 				heading='Lorem Ipsum'
 				subheading='Sit amet consectetur'
@@ -252,7 +323,7 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 				imageClass='h-12 w-auto md:-left-16'
 			/>
 		</Section> -->
-		<!-- 
+  <!-- 
 		<Section title='Certifications'>
 			<Card
 				as='a'
@@ -276,12 +347,11 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 			/>
 		</Section> -->
 
-		<Section title='Skills'>
-			<SkillLayout title='Languages' skills={languages} />
-			<SkillLayout title='Frontend' skills={frontend} />
-			<SkillLayout title='Backend' skills={backend} />
-			<SkillLayout title='Others' skills={others} />
-			<SkillLayout title='Mobile' skills={mobile} />
-		</Section>
-	</div>
+  <Section title="Skills">
+    <SkillLayout title="Languages" skills={languages} />
+    <SkillLayout title="Frontend" skills={frontend} />
+    <SkillLayout title="Backend" skills={backend} />
+    <SkillLayout title="Others" skills={others} />
+    <SkillLayout title="Mobile" skills={mobile} />
+  </Section>
 </PageLayout>
