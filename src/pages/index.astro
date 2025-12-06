@@ -139,11 +139,7 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
           ><a class="hover:underline" href="https://www.unrealengine.com/"
             >Unreal Engine</a
           ></strong
-        >,
-        <strong
-          ><a class="hover:underline" href="http://unity3d.com">Unity3d</a
-          ></strong
-        >,
+        > ,
         <strong
           ><a class="hover:underline" href="http://godot.com">Godot</a></strong
         >, and
@@ -251,8 +247,8 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
       />
     </div>
   </Section>
+  <div class="pt-4 "><Link href="/projects"> All projects →</Link></div>
   
-  <Link href="/projects"> All projects →</Link>
   {
     allPostsByDate.length > 0 && (
       <>
@@ -265,7 +261,7 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
             ))}
           </ul>
         </Section>
-        <Link href="/blog">All posts →</Link>
+   <div class="pt-4">     <Link href="/blog">All posts →</Link></div>
       </>
     )
   }
