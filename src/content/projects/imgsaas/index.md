@@ -1,11 +1,11 @@
 ---
-title: 'imgsaas'
-description: 'SaaS app providing comprehensive suite of tools for image editing, document editing, and file conversion'
-date: 'Mar 26 2024'
-demoURL: 'https://#'
-repoURL: 'https://github.com/Abdulkareemoj/imgsaas'
-imageUrl: 'https://res.cloudinary.com/dcc1yy1zv/image/upload/v1759321227/www/Screenshot_2025-09-30_at_22-21-44_gfkzpc.png'
-altText: 'Alt text for image'
+title: "imgsaas"
+description: "SaaS app providing comprehensive suite of tools for image editing, document editing, and file conversion"
+date: "Mar 26 2024"
+demoURL: "https://#"
+repoURL: "https://github.com/Abdulkareemoj/imgsaas"
+imageUrl: "https://res.cloudinary.com/dcc1yy1zv/image/upload/v1759321227/www/Screenshot_2025-09-30_at_22-21-44_gfkzpc.png"
+altText: "Alt text for image"
 ---
 
 # ImgSaaS: Image and Document Editing Platform
@@ -14,23 +14,13 @@ altText: 'Alt text for image'
 
 ImgSaaS is a Software as a Service (SaaS) platform providing a comprehensive suite of tools for image editing, document editing, and file conversion, similar to iLovePDF.com. It offers a wide range of features, including authentication, image manipulation tools, document editing capabilities, file conversion options, and AI-powered image generation.
 
-## Technologies Used
+**Tech Stack:**
 
-- **Frontend:**
-_ **Framework:** Next.js
-_ **UI Library:** Shadcn \* **State Management:** Zustand
-<!-- *   **Backend:**
-    *   **Language:** (Specify your language, e.g., Node.js, Python, Go, Java)
-    *   **Framework:** (Specify your framework, e.g., Express.js, Django, Flask, Spring Boot)
-    *   **Database:** (Specify your database, e.g., PostgreSQL, MongoDB, MySQL)
-    *   **ORM/ODM:** (Specify your ORM/ODM, e.g., Sequelize, Mongoose, Prisma, Drizzle) -->
-- **Image Editing:** (Specify your image editing library, e.g., Fabric.js, Konva.js, OpenCV)
-- **Document Editing:** (Specify your document editing library, e.g., PDF.js, Apache POI, LibreOffice API)
-- **File Conversion:** (Specify your file conversion library/service, e.g., ImageMagick, FFmpeg, CloudConvert API)
-- **Image Generation:** (Specify your AI image generation library/service, e.g., DALL-E 2 API, Stable Diffusion API, Midjourney API)
-- **Authentication:** (Specify your authentication method, e.g., NextAuth.js, Firebase Authentication, Auth0, Clerk, custom solution)
-- **Storage:** (Specify your storage solution, e.g., AWS S3, Google Cloud Storage, Azure Blob Storage, Cloudinary)
-- **Other Libraries:** (List any other significant libraries used, e.g., Zod for validation, Axios for HTTP requests)
+- **Framework:** SvelteKit and .NET Core for Backend API
+- **Styling:** TailwindCSS
+- **UI Library:** Shadcn-svelte
+- **Authentication:** JWT with refresh tokens
+- **Database:** PostgreSQL with Entity Framework Core
 
 ## Features
 
