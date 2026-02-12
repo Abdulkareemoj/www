@@ -1,71 +1,120 @@
 ---
 title: "Foreum"
-description: "A powerful, modern forum platform built with SvelteKit, tRPC, and Drizzle ORM — designed for both developers and community managers."
+description: "Modern forum platform built with SvelteKit, tRPC, and Drizzle ORM for developers and community managers"
 date: "Mar 26 2024"
 demoURL: "https://foreum.vercel.app/"
 repoURL: "https://github.com/Abdulkareemoj/foreum"
 imageUrl: "https://res.cloudinary.com/dcc1yy1zv/image/upload/v1759321228/www/Screenshot_2025-09-30_at_21-58-49_Foreum_-_Modern_Forum_Platform_for_Your_Website_scnops.png"
-altText: "Alt text for image"
+altText: "Foreum Forum Platform"
 ---
 
-# Foreum 🚀
+# Foreum: Modern Forum Platform
 
-Foreum is an all-in-one solution for building engaging community spaces. Whether you're creating a product support forum, an internal discussion board, or a vibrant community platform, Foreum provides everything you need out of the box:
+An all-in-one, production-ready forum platform that combines enterprise-grade features with exceptional developer experience. Foreum is perfect for building community spaces, product support forums, or internal discussion boards with a modern tech stack.
 
-- 🔒 **Enterprise-grade Authentication** with Better Auth
-- 🎨 **Beautiful UI** powered by shadcn-svelte components
-- 🚄 **Lightning-fast Performance** with SvelteKit
-- 🔧 **Type-safe Backend** using tRPC and Drizzle ORM
-- 📱 **Responsive Design** for all devices
-- 🌓 **Dark/Light Themes** built-in, also customizable in the admin section
+## Overview
+
+Foreum is a comprehensive forum solution designed for both users and developers. It provides everything needed to build engaging community spaces with modern authentication, rich discussion tools, and flexible customization options. Built with the latest technologies, Foreum delivers lightning-fast performance, beautiful UI, and strong type safety across the entire stack.
 
 ## Features
 
 ### Core Features
 
-- 🔐 **Advanced Authentication**
-
-  - Email/Password with username support
-  - Email verification & password reset
+- **Advanced Authentication**:
+  - Email/Password authentication with optional username support
+  - Email verification and password reset flows
   - OAuth/SSO integration ready
+  - Secure session management
 
-- 📝 **Rich Discussion Tools**
+- **Rich Discussion Tools**:
+  - Markdown and rich text editor for posts and replies
+  - Thread organization with categories and tags
+  - Upvotes, reactions, and engagement tracking
+  - File attachments and media support
+  - Full-text search capabilities
 
-  - Markdown/Rich text editor
-  - Thread categories and tags
-  - Upvotes and reactions
-  - File attachments
+- **User Management**:
+  - Customizable user profiles with avatars
+  - Role-based access control (RBAC)
+  - Moderation and content management tools
+  - User activity tracking and analytics
+  - Private messaging between users
 
-- 👥 **User Management**
-  - Customizable profiles
-  - Role-based permissions
-  - Moderation tools
-  - Activity tracking
+- **Community Features**:
+  - Bookmarks and saved threads
+  - Real-time notifications
+  - User reputation system
+  - Community guidelines enforcement
 
-### Technical Features
+### Technical Excellence
 
-- ⚡ **Performance-First Architecture**
+- **Performance**: Server-side rendering and optimized database queries for blazing-fast load times
+- **Type Safety**: End-to-end type safety with TypeScript across frontend and backend
+- **Architecture**: Extensible component design for easy feature additions
+- **UX**: Responsive design, skeleton loaders, mobile-friendly navigation, and smooth animations
+- **Accessibility**: WCAG compliant components and semantic HTML
+- **Code Quality**: Well-documented, maintainable codebase with helpful comments
 
-  - Server-side rendering with SvelteKit
-  - Type-safe APIs with tRPC
-  - Efficient database queries with Drizzle ORM
+## Tech Stack
 
-  - **Modern UI/UX** Responsive design with customizable Dark/light themes and Loading states & animations
+- **Frontend**:
+  - [SvelteKit](https://kit.svelte.dev/) - Modern, fast web framework
+  - [shadcn-svelte](https://www.shadcn-svelte.com/) - High-quality UI components
+  - [Tailwind CSS](https://tailwindcss.com/) - Utility-first styling
+  - TypeScript - Type-safe code
 
-  - **Modern stack**: SvelteKit + tRPC + Drizzle + Better Auth, great DX and strong type-safety across the stack.
-  - **Plug-and-play authentication**: email/password with optional username support, email OTP for verification and reset flows, and social sign-in support hooks.
-  - **User profiles & settings**: per-user settings (theme, privacy, notification preferences) with Drizzle schemas and a router to manage them.
-  - **Bookmarks & Notifications**: built-in systems with pagination/infinite scroll and server-side routers.
-  - **Excellent UX**: skeleton loaders, mobile-friendly navbar that collapses sidebars into a single sheet, avatar uploader, toast + alert patterns for different message types.
-  - **Extensible design**: clearly split components (LeftSidebar, Mainbar, RightSidebar, ThreadCard, etc.) to make adding features easy and localized.
-  - **Open-source friendly**: intentionally readable code, helpful comments and a focus on community contribution.
+- **Backend**:
+  - [tRPC](https://trpc.io/) - Type-safe RPC framework
+  - [Drizzle ORM](https://orm.drizzle.team/) - Type-safe database operations
+  - [Better Auth](https://www.better-auth.com/) - Secure authentication
+  - PostgreSQL - Reliable database
+
+- **Real-time**:
+  - WebSockets for live updates and notifications
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js (v16 or higher)
+- PostgreSQL database
+- pnpm or npm package manager
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Abdulkareemoj/foreum.git
+   cd foreum
+   ```
+
+2. Install dependencies:
+   ```bash
+   pnpm install
+   ```
+
+3. Set up environment variables:
+   ```bash
+   cp .env.example .env.local
+   # Edit .env.local with your database and auth credentials
+   ```
+
+4. Set up the database:
+   ```bash
+   pnpm run db:push
+   ```
+
+5. Start the development server:
+   ```bash
+   pnpm run dev
+   ```
+
+6. Open `http://localhost:5173` in your browser
 
 ## Use Cases
 
-Foreum can be used for:
-
-- A public community forum (product support, hobbyist communities, fan clubs).
-- Internal company discussion board or knowledge-sharing hub.
-- A feature-rich comment + discussion layer for an existing app.
-- An MVP for social/community features when validating product-market fit.
-- A teaching template for modern full-stack SvelteKit + tRPC apps.
+- Public community forums (product support, hobbyist communities, fan clubs)
+- Internal company discussion boards and knowledge-sharing hubs
+- Discussion layer for existing applications
+- MVP for validating social/community features
+- Learning resource for modern full-stack development with SvelteKit
