@@ -63,30 +63,30 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 ---
 
 <PageLayout meta={{ title: "Home" }}>
-  <div class="flex w-full flex-col gap-y-10">
-    <section class="flex flex-col items-center gap-y-7">
+  <div class="flex w-full flex-col gap-y-12 md:gap-y-16">
+    <section class="flex flex-col items-center gap-y-8">
       <Image
         src={astro}
         alt="profile photo"
-        class="h-40 w-auto rounded-full p-2"
+        class="h-40 w-auto rounded-full p-2 shadow-md transition-transform duration-300 hover:scale-105"
         loading="eager"
       />
 
       <div class="flex flex-col items-center gap-y-4">
-        <h1 class="text-3xl font-bold">Hello There!</h1>
+        <h1 class="text-4xl font-bold tracking-tight">Hello There!</h1>
         <a
           href="https://github.com/abdulkareemoj"
-          class="border-input flex flex-row items-center gap-x-3 rounded-3xl border px-4 py-2 text-sm shadow-xs transition-all hover:shadow-md"
+          class="border-border flex flex-row items-center gap-x-3 rounded-3xl border px-4 py-2 text-sm shadow-sm transition-all duration-300 hover:shadow-md hover:translate-y-[-2px] hover:border-accent"
         >
           <span class="relative flex items-center justify-center">
             <span
-              class="absolute inline-flex h-2 w-2 animate-ping rounded-full border border-green-400 bg-green-400 opacity-75"
+              class="absolute inline-flex h-2 w-2 animate-ping rounded-full border border-accent bg-accent opacity-75"
             ></span>
-            <span class="relative inline-flex h-2 w-2 rounded-full bg-green-400"
+            <span class="relative inline-flex h-2 w-2 rounded-full bg-accent"
             ></span>
           </span>
 
-          <p class="font-medium">Available</p>
+          <p class="font-semibold">Available</p>
         </a>
         <!-- <div class='flex flex-wrap justify-center gap-x-7 gap-y-3'>
 					<Label title='Lorem Ipsum'>
@@ -219,14 +219,13 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
     </Section>
   </div>
   <Section title="Projects">
-    <div class="flex flex-col gap-y-3 sm:flex-row sm:gap-x-3 sm:gap-y-0">
+    <div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
       <ProjectCard
         href="/projects/task "
         heading="Fintech app Dashboard"
         subheading=" A modern, responsive dashboard application built with React and TailwindCSS."
         imagePath="https://res.cloudinary.com/dcc1yy1zv/image/upload/v1759321228/www/Screenshot_2025-09-30_at_22-23-27_Task_tvjd1o.png"
         altText="Example"
-        class="w-full sm:w-1/2"
       />
       <ProjectCard
         href="/projects/email-forge"
@@ -234,7 +233,6 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
         subheading="An Email Template Builder ."
         imagePath="https://res.cloudinary.com/dcc1yy1zv/image/upload/v1759321225/www/Screenshot_2025-09-30_at_22-09-54_SalesCRM_-_Boost_Your_Sales_with_Smart_CRM_abgs0e.https://res.cloudinary.com/dcc1yy1zv/image/upload/v1767175755/www/8c2a7926-850a-42c6-b724-9bcef1fe51da.png"
         altText="Example"
-        class="w-full sm:w-1/2"
       />
 
       <ProjectCard
@@ -243,7 +241,6 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
         subheading="Full-stack web app built with Next.js that allows users to customize a 3D model of a t-shirt and visualize the changes in real-time."
         imagePath="https://res.cloudinary.com/dcc1yy1zv/image/upload/v1759321229/www/Screenshot_2025-09-30_at_21-56-08_u10swc.png"
         altText="Example"
-        class="w-full sm:w-1/2"
       />
       <ProjectCard
         href="/projects/node-react-ts-docker"
@@ -251,25 +248,24 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
         subheading="Containerized setup for both frontend and backend using React and Node.js"
         imagePath="https://res.cloudinary.com/dcc1yy1zv/image/upload/v1759321228/www/Screenshot_2025-09-30_at_22-13-14_Create_TanStack_App_-_node-client_a5xsa8.png"
         altText="Lorem, ipsum dolor sit"
-        class="w-full sm:w-1/2"
       />
     </div>
   </Section>
-  <div class="pt-4 "><Link href="/projects"> All projects →</Link></div>
+  <div class="pt-2"><Link href="/projects" class="transition-colors duration-300 hover:text-accent">All projects →</Link></div>
   
   {
     allPostsByDate.length > 0 && (
       <>
         <Section title="Posts">
-          <ul class="flex flex-col gap-y-2">
+          <ul class="flex flex-col gap-y-3">
             {allPostsByDate.map((p) => (
-              <li class="flex flex-col gap-x-2 sm:flex-row">
+              <li class="flex flex-col gap-x-2 sm:flex-row transition-colors duration-300 hover:text-accent">
                 <PostPreview post={p} />
               </li>
             ))}
           </ul>
         </Section>
-   <div class="pt-4">     <Link href="/blog">All posts →</Link></div>
+   <div class="pt-2"><Link href="/blog" class="transition-colors duration-300 hover:text-accent">All posts →</Link></div>
       </>
     )
   }

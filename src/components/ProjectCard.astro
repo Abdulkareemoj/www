@@ -17,20 +17,20 @@ const {
 <Tag
 	class={cn(
 		className,
-		'flex flex-col gap-y-3 rounded-2xl border border-border bg-primary-foreground ',
-		href && 'transition-all hover:border-foreground/25 hover:shadow-xs'
+		'group flex flex-col gap-y-3 rounded-2xl border border-border bg-card shadow-sm',
+		href && 'transition-all duration-300 hover:shadow-lg hover:translate-y-[-2px]'
 	)}
 	href={href}
 >
 	<img
 		src={imagePath}
 		alt={altText}
-		class='h-48 w-full rounded-2xl rounded-bl-none rounded-br-none object-cover'
+		class='h-48 w-full rounded-t-2xl object-cover group-hover:brightness-110 transition-[brightness] duration-300'
 		loading='eager'
 	/>
-	<div class='flex flex-col gap-y-0.5 px-5 py-4'>
-		<h1 class='text-lg font-medium'>{heading}</h1>
-		<h2 class='text-muted-foreground'>{subheading}</h2>
+	<div class='flex flex-col gap-y-1 px-5 py-4'>
+		<h1 class='text-lg font-semibold tracking-tight group-hover:text-accent transition-colors duration-300'>{heading}</h1>
+		<h2 class='text-sm text-muted-foreground leading-relaxed'>{subheading}</h2>
 	</div>
 
 	<slot />
