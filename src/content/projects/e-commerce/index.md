@@ -2,9 +2,9 @@
 title: "Multivendor E‑commerce Platform"
 description: "Modern multivendor e-commerce platform with React Native mobile app and Hono backend"
 date: "Mar 12 2026"
-demoURL: ""
-repoURL: ""
-imageUrl: "/images/projects/e-commerce-thumb.jpg"
+demoURL: "https://github.com/Abdulkareemoj/e-commerce"
+repoURL: "https://github.com/Abdulkareemoj/e-commerce"
+imageUrl: ""
 altText: "Multivendor E-commerce Platform"
 ---
 
