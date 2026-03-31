@@ -130,10 +130,10 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
       <p>
         <small> IPA &nbsp; /ˈwiztek/ — no meaning, I made it up </small>
         <br />
-        Hi, I'm <strong>Abdulkareem</strong> (aka <strong>WiZtEk</strong> ). I'm
-        a Fullstack Developer who enjoys creating and improving things. I like to
-        have a complete understanding of a system so I can optimize it. I primarily
-        focus on <strong>Web</strong> and
+        Hi, I'm <strong>Abdulkareem</strong> (aka <strong>WiZtEk</strong> ). I'm a
+        Fullstack Developer who enjoys creating and improving things. I like to have
+        a complete understanding of a system so I can optimize it. I primarily focus
+        on <strong>Web</strong> and
         <strong>Game Development</strong>, using technologies such as
         <strong
           ><a class="hover:underline" href="https://www.unrealengine.com/"
@@ -191,9 +191,9 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
             Foreum,
           </a>
         </strong> a self hostable all-in-one solution for building engaging community
-        spaces,  an
-        
-          <strong>
+        spaces, an
+
+        <strong>
           <a
             href="https://email-builder-psi-six.vercel.app/"
             target="_blank"
@@ -201,10 +201,9 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
           >
             Email Template Builder
           </a>
-        </strong> for creating responsive email templates for marketing campaigns and newsletters, 
-        
-          
-        
+        </strong> for creating responsive email templates for marketing campaigns
+        and newsletters,
+
         <strong>
           <a
             href="https://github.com/abdulkareemoj/freader"
@@ -213,9 +212,12 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
           >
             freader,
           </a>
-        </strong> a Multi platform ebook reader 
-      for desktop and mobile devices and also  <strong> BookReader</strong> a <strong>Bookmark Manager</strong> and<strong>  RSS Reader</strong> tool, all
-      in one </p>
+        </strong> a Multi platform ebook reader for desktop and mobile devices and
+        also <strong> BookReader</strong> a <strong>Bookmark Manager</strong> and<strong
+        >
+          RSS Reader</strong
+        > tool, all in one
+      </p>
     </Section>
   </div>
   <Section title="Projects">
@@ -231,7 +233,7 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
         href="/projects/email-forge"
         heading="Email Forge"
         subheading="An Email Template Builder."
-        imagePath="https://res.cloudinary.com/dcc1yy1zv/image/upload/v1759321225/www/Screenshot_2025-09-30_at_22-09-54_SalesCRM_-_Boost_Your_Sales_with_Smart_CRM_abgs0e.https://res.cloudinary.com/dcc1yy1zv/image/upload/v1767175755/www/8c2a7926-850a-42c6-b724-9bcef1fe51da.png"
+        imagePath="https://res.cloudinary.com/dcc1yy1zv/image/upload/v1767175755/www/8c2a7926-850a-42c6-b724-9bcef1fe51da.png"
         altText="Example"
       />
 
@@ -239,7 +241,7 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
         href="/projects/e-commerce"
         heading="Multivendor E‑commerce Platform"
         subheading="Modern multivendor e-commerce platform with React Native mobile app and Hono backend"
-        imagePath=""
+        imagePath="https://res.cloudinary.com/dcc1yy1zv/image/upload/v1773337637/www/multi-ecommerece_ru38ow.png"
         altText="Example"
       />
       <ProjectCard
@@ -251,8 +253,13 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
       />
     </div>
   </Section>
-  <div class="pt-2"><Link href="/projects" class="transition-colors duration-300 hover:text-accent">All projects →</Link></div>
-  
+  <div class="pt-2">
+    <Link
+      href="/projects"
+      class="transition-colors duration-300 hover:text-accent"
+      >All projects →</Link>
+  </div>
+
   {
     allPostsByDate.length > 0 && (
       <>
@@ -265,7 +272,14 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
             ))}
           </ul>
         </Section>
-   <div class="pt-2"><Link href="/blog" class="transition-colors duration-300 hover:text-accent">All posts →</Link></div>
+        <div class="pt-2">
+          <Link
+            href="/blog"
+            class="transition-colors duration-300 hover:text-accent"
+          >
+            All posts →
+          </Link>
+        </div>
       </>
     )
   }
