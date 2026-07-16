@@ -7,11 +7,12 @@ import rehypeExternalLinks from "rehype-external-links";
 import rehypeUnwrapImages from "rehype-unwrap-images";
 import expressiveCode from "astro-expressive-code";
 import icon from "astro-icon";
+import { unified } from "@astrojs/markdown-remark";
 import { expressiveCodeOptions } from "./src/site.config.ts";
 import { remarkReadingTime } from "./src/utils/remarkReadingTime.ts";
 // https://astro.build/config
 export default defineConfig({
-  site: "https://abdulkareemoj.deno.dev",
+  site: "https://abdulkareemoj.vercel.app",
   vite: {
     plugins: [tailwindcss()],
   },
@@ -22,22 +23,24 @@ export default defineConfig({
     icon(),
   ],
   markdown: {
-    remarkPlugins: [remarkReadingTime],
-    rehypePlugins: [
-      rehypeUnwrapImages,
-      [
-        rehypeExternalLinks,
-        {
-          target: "_blank",
-          rel: ["nofollow, noopener, noreferrer"],
-        },
+    processor: unified({
+      remarkPlugins: [remarkReadingTime],
+      rehypePlugins: [
+        rehypeUnwrapImages,
+        [
+          rehypeExternalLinks,
+          {
+            target: "_blank",
+            rel: ["nofollow, noopener, noreferrer"],
+          },
+        ],
       ],
-    ],
-    remarkRehype: {
-      footnoteLabelProperties: {
-        className: [""],
+      remarkRehype: {
+        footnoteLabelProperties: {
+          className: [""],
+        },
       },
-    },
+    }),
   },
   prefetch: true,
 });
