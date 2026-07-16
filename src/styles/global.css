@@ -126,6 +126,10 @@
 
   /* Font families */
   --font-satoshi: "Satoshi", ui-sans-serif, system-ui, sans-serif;
+
+  /* Custom easing curves */
+  --ease-out-custom: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-in-out-custom: cubic-bezier(0.77, 0, 0.175, 1);
 }
 
 @layer components {
@@ -200,7 +204,7 @@
 
   /* Smooth transitions for interactive elements */
   .transition-smooth {
-    @apply transition-all duration-300 ease-out;
+    @apply transition-[transform,opacity] duration-200 ease-out-custom;
   }
 
   /* Card elevation and hover effects */
@@ -209,6 +213,6 @@
   }
 
   .card-hover {
-    @apply hover:shadow-lg hover:translate-y-[-2px] transition-all duration-300;
+    @apply hover:shadow-lg hover:-translate-y-1 transition-[transform,box-shadow] duration-200 ease-out-custom;
   }
 }

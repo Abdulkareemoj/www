@@ -1,5 +1,5 @@
 ---
-import { getCollection } from 'astro:content'
+import { getCollection, render } from 'astro:content'
 import PageLayout from '@/layouts/BaseLayout.astro'
 import { dateRange } from '@/lib/utils'
 import Button from '@components/Button.astro'
@@ -10,7 +10,7 @@ const collection = (await getCollection('work')).sort(
 
 const work = await Promise.all(
 	collection.map(async (item) => {
-		const { Content } = await item.render()
+		const { Content } = await render(item)
 		return { ...item, Content }
 	})
 )
@@ -40,7 +40,7 @@ const meta = {
 		</Button>
 		<div class='flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-center'>
 			<h1 class='mb-2 mt-6 text-3xl font-bold tracking-tight'>Work Experience</h1>
-			<Button title='Download Resume' href='/resume.pdf' style='button' class='transition-all duration-300 hover:shadow-md hover:translate-y-[-2px]'>
+			<Button title='Download Resume' href='/resume.pdf' style='button' class='transition-shadow hover:shadow-md'>
 				<svg
 					xmlns='http://www.w3.org/2000/svg'
 					width='24'
@@ -63,22 +63,18 @@ const meta = {
 		<ul class='flex flex-col gap-8 py-8'>
 			{
 				work.map((entry) => (
-					<li class='group rounded-2xl border border-border bg-card shadow-sm p-6 transition-all duration-300 hover:shadow-md hover:translate-y-[-2px]'>
+					<li class='group rounded-2xl border border-border bg-card shadow-sm p-6 transition-shadow hover:shadow-md active:scale-[0.98]'>
 						<div class='text-xs font-semibold uppercase tracking-widest text-accent mb-2'>
 							{dateRange(entry.data.dateStart, entry.data.dateEnd)}
 						</div>
-						<div class='text-xl font-semibold tracking-tight group-hover:text-accent transition-colors duration-300 mb-1'>{entry.data.company}</div>
+						<div class='text-xl font-semibold tracking-tight group-hover:text-accent transition-colors mb-1'>{entry.data.company}</div>
 						<div class='text-sm text-muted-foreground mb-4'>{entry.data.role}</div>
-						<article class='text-sm text-foreground/90 leading-relaxed'>
+						<article class='prose prose-sm prose-zinc dark:prose-invert prose-ul:list-disc prose-ul:space-y-1 prose-li:marker:text-accent max-w-none'>
 							<entry.Content />
 						</article>
 					</li>
 				))
 			}
 		</ul>
-		<!-- 
-      <ul class="animate flex flex-col gap-4">
-
-      </ul> -->
 	</div>
 </PageLayout>

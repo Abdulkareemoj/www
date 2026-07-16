@@ -21,7 +21,7 @@ const EDITORS = [
 	{
 		name: 'Visual Studio',
 		description: 'IDE',
-		href: 'https://www.viusalstudio.com/',
+		href: 'https://visualstudio.microsoft.com/',
 		iconPath: 'visualstudio',
 		iconBgColour: '#EFEFEE'
 	}
@@ -45,7 +45,7 @@ const DEVTOOLS = [
 	{
 		name: 'Windows Terminal',
 		description: 'Terminal Emulator',
-		href: 'https://iterm2.com',
+		href: 'https://github.com/microsoft/terminal',
 		iconPath: 'windows-terminal',
 		iconBgColour: '#4D4D4D'
 	},
@@ -56,14 +56,6 @@ const DEVTOOLS = [
 		iconPath: 'kali-linux',
 		iconBgColour: '#557C94'
 	}
-
-	// {
-	//     name: 'Penpot',
-	//     description: 'Design Tool',
-	//     href: 'https://penpot.app',
-	//     iconPath: 'penpot',
-	//     iconBgColour: '#00BFA6'
-	// }
 ]
 
 const PRODUCTIVITY = [
@@ -98,13 +90,6 @@ const BROWSERS = [
 		iconBgColour: '#FF7139'
 	},
 	{
-		name: 'Arc',
-		description: 'Browser',
-		href: 'https://www.apple.com/safari',
-		iconPath: 'arc',
-		iconBgColour: '#414350'
-	},
-	{
 		name: 'Microsoft Edge',
 		description: 'Browser',
 		href: 'https://www.microsoft.com/en-us/edge',
@@ -112,49 +97,9 @@ const BROWSERS = [
 		iconBgColour: '#0078D7'
 	}
 ]
-const NOTETAKING_APPS = [
-// {
-// 		name: 'Sticky Notes',
-// 		description: 'For task management, long-term planning and notes',
-// 		href: 'https://www.notion.so',
-// 		iconPath: 'sticky-notes',
-// 		iconBgColour: '#FFCC00'
-// 	},
-	{
-		name: 'Microsoft OneNote',
-		description: 'For quick notes, mind-mapping and managing my newsletter',
-		href: 'https://www.onenote.com/',
-		iconPath: 'onenote',
-		iconBgColour: '#7719AA'
-	}
-]
-
-const HELPERAPPS = [
-	// {
-	// 	name: 'UniGetUI',
-	// 	description: 'All-in-one package manager for Windows',
-	// 	href: 'https://brew.sh',
-	// 	iconPath: 'wingetui',
-	// 	iconBgColour: '#0078D7'
-	// },
-	{
-		name: 'Bitwarden',
-		description: 'Password manager which really checks the right boxes',
-		href: 'https://1password.com',
-		iconPath: 'bitwarden',
-		iconBgColour: '#175DDC'
-	},
-	// {
-	// 	name: 'Barrier',
-	// 	description: 'Software KVM that allows sharing a mouse and keyboard over a network',
-	// 	href: 'https://1password.com',
-	// 	iconPath: 'barrier',
-	// 	iconBgColour: '#00AEEF'
-	// }
-]
 ---
 
-<PageLayout meta={{ title: 'Home' }}>
+<PageLayout meta={{ title: 'Tools', description: 'Tools and software I use daily' }}>
 	<div class='w-full'>
 		<Button title='Back' href='/' style='button'>
 			<svg
@@ -181,8 +126,6 @@ const HELPERAPPS = [
 			<ToolSection title='Editors' tools={EDITORS} />
 			<ToolSection title='Productivity' tools={PRODUCTIVITY} />
 			<ToolSection title='Browsers' tools={BROWSERS} />
-			<ToolSection title='Note Taking' tools={NOTETAKING_APPS} />
-			<ToolSection title='Helper Apps' tools={HELPERAPPS} />
 			<ToolSection title='Dev Tools' tools={DEVTOOLS} />
 
 		</div>
