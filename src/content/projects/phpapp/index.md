@@ -8,6 +8,6 @@ imageUrl: "https://www.pexels.com/photo/beautiful-grey-headed-yellow-finch-on-wo
 altText: "PHP Web Application"
 ---
 
-A PHP application template with authentication, role-based access control, and user management built in — a ready-made foundation for quickly standing up secure, multi-user business apps.
+A PHP application template with authentication, role-based access control, and user management built in, a ready-made foundation for quickly standing up secure, multi-user business apps.
 
 **Built with:** PHP, MySQL/MariaDB

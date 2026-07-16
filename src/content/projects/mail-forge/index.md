@@ -8,6 +8,6 @@ imageUrl: "https://res.cloudinary.com/dcc1yy1zv/image/upload/v1767175755/www/8c2
 altText: "Mail Forge Template Builder"
 ---
 
-A SaaS email template builder with a drag-and-drop editor, prebuilt templates, and AI-generated copy — built so marketers can put together polished, responsive emails without writing code.
+A SaaS email template builder with a drag-and-drop editor, prebuilt templates, and AI-generated copy, built so marketers can put together polished, responsive emails without writing code.
 
 **Built with:** Next.js, Tailwind CSS, PostgreSQL, Drizzle ORM

@@ -8,6 +8,6 @@ imageUrl: "https://res.cloudinary.com/dcc1yy1zv/image/upload/v1759321229/www/Scr
 altText: "3D T-shirt Customizer"
 ---
 
-An interactive 3D t-shirt customizer — users tweak colors, textures, and designs with instant visual feedback, then save their creations to a personal dashboard.
+An interactive 3D t-shirt customizer, users tweak colors, textures, and designs with instant visual feedback, then save their creations to a personal dashboard.
 
 **Built with:** Next.js, Three.js / React Three Fiber, PostgreSQL

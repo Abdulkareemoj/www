@@ -8,6 +8,6 @@ imageUrl: "https://res.cloudinary.com/dcc1yy1zv/image/upload/v1759321227/www/Scr
 altText: "ImgSaaS Platform"
 ---
 
-An iLovePDF/Canva-style SaaS for editing images, manipulating documents, and converting files — with AI-powered background removal, batch processing, and cloud storage, all without installing desktop software.
+An iLovePDF/Canva-style SaaS for editing images, manipulating documents, and converting files, with AI-powered background removal, batch processing, and cloud storage, all without installing desktop software.
 
 **Built with:** SvelteKit, ASP.NET Core, PostgreSQL

@@ -11,6 +11,6 @@ dateEnd: "Present"
 
 - Architected a [multivendor e-commerce platform](https://github.com/Abdulkareemoj/e-commerce) spanning a cross-platform mobile app (React Native/Expo) and a Hono/PostgreSQLbackend, with role-based storefronts for vendors, customers, and admins.
 
-- Developed [Strmr](https://github.com/Abdulkareemoj/Strmr), an educational video streaming platform with a shared Next.js web/API backend and [companion React Native mobile app](https://github.com/Abdulkareemoj/Strmr-rn), alongside [BookmarkReader](https://github.com/Abdulkareemoj/bookmarkreader) and [Freader](https://github.com/Abdulkareemoj/freader) — cross-platform bookmark/RSS and ebook reader apps spanning web, desktop, and mobile.
+- Developed [Strmr](https://github.com/Abdulkareemoj/Strmr), an educational video streaming platform with a shared Next.js web/API backend and [companion React Native mobile app](https://github.com/Abdulkareemoj/Strmr-rn), alongside [BookmarkReader](https://github.com/Abdulkareemoj/bookmarkreader) and [Freader](https://github.com/Abdulkareemoj/freader), cross-platform bookmark/RSS and ebook reader apps spanning web, desktop, and mobile.
 
-- Owned the full lifecycle on each project independently — architecture, database design, UI, and deployment — while building out a self-directed portfolio of production-grade apps.
+- Owned the full lifecycle on each project independently, architecture, database design, UI, and deployment, while building out a self-directed portfolio of production-grade apps.
