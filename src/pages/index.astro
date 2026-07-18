@@ -153,13 +153,13 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
         imagePath="https://res.cloudinary.com/dcc1yy1zv/image/upload/v1759321228/www/Screenshot_2025-09-30_at_21-58-49_Foreum_-_Modern_Forum_Platform_for_Your_Website_scnops.png"
         altText="Lorem, ipsum dolor sit"
       />
-     <div class="pt-2">
+  </div> 
+        <div class="pt-2">
     <Button
       href="/projects"
       class="ptransition-colors duration-300 hover:text-accent"
       >All projects →</Button>
-  </div> </div> 
-    
+  </div>
   
 
 
@@ -176,7 +176,8 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
                 <PostPreview post={p} />
               </li>
             ))}
-          </ul> <div class="pt-2 flex justify-start">
+          </ul>
+        </Section> <div class="pt-2 flex justify-start">
           <Button
             href="/blog"
             class="transition-colors duration-300 hover:text-accent"
@@ -184,7 +185,6 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
             All posts →
           </Button>
         </div>
-        </Section>
        
       </>
     )
