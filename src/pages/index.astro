@@ -13,44 +13,44 @@ import Link from "@/components/Link.astro";
 
 const languages = ["Javascript/Typescript", "C", "PHP", "C#", "Bash"];
 const frontend = [
-  "HTML",
-  "CSS",
-  "SASS",
-  "TailwindCSS",
-  "Boostrap",
-  "Fresh",
-  "React",
-  "Astro",
-  "Markdown",
+	"HTML",
+	"CSS",
+	"SASS",
+	"TailwindCSS",
+	"Boostrap",
+	"Fresh",
+	"React",
+	"Astro",
+	"Markdown",
 ];
 const backend = [
-  "Node.js",
-  "NextJS",
-  "Deno",
-  "GraphQL",
-  "MongoDB",
-  "MySQL",
-  "PostgreSQL",
+	"Node.js",
+	"NextJS",
+	"Deno",
+	"GraphQL",
+	"MongoDB",
+	"MySQL",
+	"PostgreSQL",
 ];
 const others = [
-  "AWS",
-  "GCP",
-  "DevOps",
-  "Blender",
-  "Unity",
-  "Stride3d",
-  "Git",
-  "CI/CD",
-  "Godot",
-  "JAMStack",
-  "Tanstack",
-  "SWR",
-  "Zustand",
+	"AWS",
+	"GCP",
+	"DevOps",
+	"Blender",
+	"Unity",
+	"Stride3d",
+	"Git",
+	"CI/CD",
+	"Godot",
+	"JAMStack",
+	"Tanstack",
+	"SWR",
+	"Zustand",
 
-  "Websockets",
-  "WebRTC",
-  "CMS Integration",
-  "API Design",
+	"Websockets",
+	"WebRTC",
+	"CMS Integration",
+	"API Design",
 ];
 const mobile = ["Flutter", "React Native"];
 
@@ -95,22 +95,22 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
         <br />
         Hi, I'm <strong>Abdulkareem</strong> (aka <strong>WiZtEk</strong>). I'm a
         Fullstack Developer focused on <strong>Web</strong> and
-        <strong>Game Development</strong>. For web I work with
-        <a class="hover:underline" href="https://nextjs.org">Next.js</a>,
-        <a class="hover:underline" href="https://kit.svelte.dev">SvelteKit</a>,
-        <a class="hover:underline" href="https://nodejs.org">Node.js</a>,
-        <a class="hover:underline" href="https://hono.dev">Hono</a>, and
-        <a class="hover:underline" href="https://deno.com">Deno</a>. For games,
-        <a class="hover:underline" href="https://www.unrealengine.com/">Unreal Engine</a>,
-        <a class="hover:underline" href="https://godot.com">Godot</a>, and
-        <a class="hover:underline" href="https://blender.org">Blender</a>.
+        <strong>{" "}Game Development</strong>. For web I work with
+        <a class="hover:underline" href="https://nextjs.org">{" "}Next.js</a>,
+        <a class="hover:underline" href="https://kit.svelte.dev">{" "}SvelteKit</a>,
+        <a class="hover:underline" href="https://nodejs.org">{" "}Node.js</a>,
+        <a class="hover:underline" href="https://hono.dev">{" "}Hono</a>, and
+        <a class="hover:underline" href="https://deno.com">{" "}Deno</a>. For games,
+        <a class="hover:underline" href="https://www.unrealengine.com/">{" "}Unreal Engine</a>,
+        <a class="hover:underline" href="https://godot.com">{" "}Godot</a>, and
+        <a class="hover:underline" href="https://blender.org">{" "}Blender</a>.
         Also exploring <strong>C#</strong> with
-        <a class="hover:underline" href="https://dotnet.microsoft.com/en-us/apps/aspnet">ASP.NET</a>.
+        <a class="hover:underline" href="https://dotnet.microsoft.com/en-us/apps/aspnet">{" "}ASP.NET</a>.
       </p>
 
       <p class="mb-4">
         Currently building
-        <a href="https://foreum.vercel.app/" target="_blank" class="hover:underline font-semibold">Foreum</a>,
+        <a href="https://foreum.vercel.app/" target="_blank" class="hover:underline font-semibold">{" "}Foreum</a>,
         a self-hostable community platform;
         an <a href="https://email-builder-psi-six.vercel.app/" target="_blank" class="hover:underline font-semibold">Email Template Builder</a>;
         and <a href="https://github.com/abdulkareemoj/freader" target="_blank" class="hover:underline font-semibold">freader</a>,
@@ -152,10 +152,10 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
     </div>
   </Section>
   <div class="pt-2">
-    <Link
+    <Button
       href="/projects"
-      class="transition-colors duration-300 hover:text-accent"
-      >All projects →</Link>
+      class="ptransition-colors duration-300 hover:text-accent"
+      >All projects →</Button>
   </div>
 
   {
@@ -170,13 +170,13 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
             ))}
           </ul>
         </Section>
-        <div class="pt-2">
-          <Link
+        <div class="pt-2 flex justify-start">
+          <Button
             href="/blog"
             class="transition-colors duration-300 hover:text-accent"
           >
             All posts →
-          </Link>
+          </Button>
         </div>
       </>
     )
