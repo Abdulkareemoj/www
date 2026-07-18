@@ -4,7 +4,6 @@ import Section from "@/components/Section.astro";
 import ProjectCard from "@/components/ProjectCard.astro";
 import SkillLayout from "@/components/SkillLayout.astro";
 import PostPreview from "@/components/PostPreview.astro";
-import Button from "@/components/Button.astro";
 
 import { Image } from "astro:assets";
 import astro from "@/assets/social-card.png";
@@ -155,10 +154,10 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
       />
   </div> 
         <div class="pt-2">
-    <Button
+    <Link
       href="/projects"
       class="ptransition-colors duration-300 hover:text-accent"
-      >All projects →</Button>
+      >All projects →</Link>
   </div>
   
 
@@ -178,12 +177,12 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
             ))}
           </ul>
         </Section> <div class="pt-2 flex justify-start">
-          <Button
+          <Link
             href="/blog"
             class="transition-colors duration-300 hover:text-accent"
           >
             All posts →
-          </Button>
+          </Link>
         </div>
        
       </>
