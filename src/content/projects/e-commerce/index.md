@@ -4,7 +4,7 @@ description: "Modern multivendor e-commerce platform with React Native mobile ap
 date: "Mar 12 2026"
 demoURL: "https://github.com/Abdulkareemoj/e-commerce"
 repoURL: "https://github.com/Abdulkareemoj/e-commerce"
-imageUrl: "https://res.cloudinary.com/dcc1yy1zv/image/upload/v1773337637/www/multi-ecommerece_ru38ow.png"
+imageUrl: "https://res.cloudinary.com/dcc1yy1zv/image/upload/v1784817004/www/marketplace_n2almj.webp"
 altText: "Multivendor E-commerce Platform"
 ---
 
