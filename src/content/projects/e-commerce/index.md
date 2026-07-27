@@ -1,8 +1,8 @@
 ---
 title: "Multivendor E‑commerce Platform"
-description: "Modern multivendor e-commerce platform with React Native mobile app and Hono backend"
+description: "Modern multivendor e-commerce platform with React Native, Expo and Hono backend"
 date: "Mar 12 2026"
-demoURL: "https://github.com/Abdulkareemoj/e-commerce"
+demoURL: "https://e-commerce-backend-eight-theta.vercel.app/home"
 repoURL: "https://github.com/Abdulkareemoj/e-commerce"
 imageUrl: "https://res.cloudinary.com/dcc1yy1zv/image/upload/v1784817004/www/marketplace_n2almj.webp"
 altText: "Multivendor E-commerce Platform"
