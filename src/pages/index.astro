@@ -13,44 +13,44 @@ import Link from "@/components/Link.astro";
 
 const languages = ["Javascript/Typescript", "C", "PHP", "C#", "Bash"];
 const frontend = [
-	"HTML",
-	"CSS",
-	"SASS",
-	"TailwindCSS",
-	"Boostrap",
-	"Fresh",
-	"React",
-	"Astro",
-	"Markdown",
+    "HTML",
+    "CSS",
+    "SASS",
+    "TailwindCSS",
+    "Boostrap",
+    "Fresh",
+    "React",
+    "Astro",
+    "Markdown",
 ];
 const backend = [
-	"Node.js",
-	"NextJS",
-	"Deno",
-	"GraphQL",
-	"MongoDB",
-	"MySQL",
-	"PostgreSQL",
+    "Node.js",
+    "NextJS",
+    "Deno",
+    "GraphQL",
+    "MongoDB",
+    "MySQL",
+    "PostgreSQL",
 ];
 const others = [
-	"AWS",
-	"GCP",
-	"DevOps",
-	"Blender",
-	"Unity",
-	"Stride3d",
-	"Git",
-	"CI/CD",
-	"Godot",
-	"JAMStack",
-	"Tanstack",
-	"SWR",
-	"Zustand",
+    "AWS",
+    "GCP",
+    "DevOps",
+    "Blender",
+    "Unity",
+    "Stride3d",
+    "Git",
+    "CI/CD",
+    "Godot",
+    "JAMStack",
+    "Tanstack",
+    "SWR",
+    "Zustand",
 
-	"Websockets",
-	"WebRTC",
-	"CMS Integration",
-	"API Design",
+    "Websockets",
+    "WebRTC",
+    "CMS Integration",
+    "API Design",
 ];
 const mobile = ["Flutter", "React Native"];
 
@@ -59,142 +59,168 @@ const allPosts = await getAllPosts();
 const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 ---
 
-<PageLayout meta={{ title: "Home", description: "Abdulkareem Ojerinde - Fullstack Developer specializing in Web and Game Development" }}>
-  <div class="flex w-full flex-col gap-y-12 md:gap-y-16">
-    <section class="flex flex-col items-center gap-y-8">
-      <Image
-        src={astro}
-        alt="profile photo"
-        class="h-40 w-auto rounded-full p-2 shadow-md transition-transform duration-300 hover:scale-105"
-        loading="eager"
-      />
+<PageLayout
+    meta={{
+        title: "Home",
+        description:
+            "Abdulkareem Ojerinde - Fullstack Developer specializing in Web and Game Development",
+    }}
+>
+    <div class="flex w-full flex-col gap-y-12 md:gap-y-16">
+        <section class="flex flex-col items-center gap-y-8">
+            <Image
+                src={astro}
+                alt="profile photo"
+                class="h-40 w-auto rounded-full p-2 shadow-md transition-transform duration-300 hover:scale-105"
+                loading="eager"
+            />
 
-      <div class="flex flex-col items-center gap-y-4">
-        <h1 class="text-4xl font-bold tracking-tight">Hello There!</h1>
-        <a
-          href="https://github.com/abdulkareemoj"
-          class="border-border flex flex-row items-center gap-x-3 rounded-3xl border px-4 py-2 text-sm shadow-sm transition-all duration-300 hover:shadow-md hover:translate-y-[-2px] hover:border-accent"
-        >
-          <span class="relative flex items-center justify-center">
-            <span
-              class="absolute inline-flex h-2 w-2 animate-ping rounded-full border border-accent bg-accent opacity-75"
-            ></span>
-            <span class="relative inline-flex h-2 w-2 rounded-full bg-accent"
-            ></span>
-          </span>
+            <div class="flex flex-col items-center gap-y-4">
+                <h1 class="text-4xl font-bold tracking-tight">Hello There!</h1>
+                <a
+                    href="https://github.com/abdulkareemoj"
+                    class="border-border flex flex-row items-center gap-x-3 rounded-3xl border px-4 py-2 text-sm shadow-sm transition-all duration-300 hover:shadow-md hover:translate-y-[-2px] hover:border-accent"
+                >
+                    <span class="relative flex items-center justify-center">
+                        <span
+                            class="absolute inline-flex h-2 w-2 animate-ping rounded-full border border-accent bg-accent opacity-75"
+                        ></span>
+                        <span
+                            class="relative inline-flex h-2 w-2 rounded-full bg-accent"
+                        ></span>
+                    </span>
 
-          <p class="font-semibold">Available</p>
-        </a>
+                    <p class="font-semibold">Available</p>
+                </a>
+            </div>
+        </section>
 
-      </div>
-    </section>
+        <Section title="About">
+            <p>
+                <small>IPA /ˈwiztek/, no meaning, I made it up</small>
+                <br />
+                Hi, I'm <strong>Abdulkareem</strong> (aka <strong>WiZtEk</strong
+                >). I'm a Fullstack Developer focused on <strong>Web</strong> and
+                <strong>{" "}Game Development</strong>. For web I work with
+                <a class="hover:underline" href="https://nextjs.org"
+                    >{" "}Next.js</a
+                >,
+                <a class="hover:underline" href="https://kit.svelte.dev"
+                    >{" "}SvelteKit</a
+                >,
+                <a class="hover:underline" href="https://nodejs.org"
+                    >{" "}Node.js</a
+                >,
+                <a class="hover:underline" href="https://hono.dev">{" "}Hono</a
+                >, and
+                <a class="hover:underline" href="https://deno.com">{" "}Deno</a
+                >. For games,
+                <a class="hover:underline" href="https://www.unrealengine.com/"
+                    >{" "}Unreal Engine</a
+                >,
+                <a class="hover:underline" href="https://godot.com"
+                    >{" "}Godot</a
+                >, and
+                <a class="hover:underline" href="https://blender.org"
+                    >{" "}Blender</a
+                >. Also exploring <strong>C#</strong> with
+                <a
+                    class="hover:underline"
+                    href="https://dotnet.microsoft.com/en-us/apps/aspnet"
+                    >{" "}ASP.NET</a
+                >.
+            </p>
 
-    <Section title="About">
-      <p>
-        <small>IPA /ˈwiztek/, no meaning, I made it up</small>
-        <br />
-        Hi, I'm <strong>Abdulkareem</strong> (aka <strong>WiZtEk</strong>). I'm a
-        Fullstack Developer focused on <strong>Web</strong> and
-        <strong>{" "}Game Development</strong>. For web I work with
-        <a class="hover:underline" href="https://nextjs.org">{" "}Next.js</a>,
-        <a class="hover:underline" href="https://kit.svelte.dev">{" "}SvelteKit</a>,
-        <a class="hover:underline" href="https://nodejs.org">{" "}Node.js</a>,
-        <a class="hover:underline" href="https://hono.dev">{" "}Hono</a>, and
-        <a class="hover:underline" href="https://deno.com">{" "}Deno</a>. For games,
-        <a class="hover:underline" href="https://www.unrealengine.com/">{" "}Unreal Engine</a>,
-        <a class="hover:underline" href="https://godot.com">{" "}Godot</a>, and
-        <a class="hover:underline" href="https://blender.org">{" "}Blender</a>.
-        Also exploring <strong>C#</strong> with
-        <a class="hover:underline" href="https://dotnet.microsoft.com/en-us/apps/aspnet">{" "}ASP.NET</a>.
-      </p>
+            <p class="mb-4">
+                Currently building
+                <a
+                    href="https://foreum.vercel.app/"
+                    target="_blank"
+                    class="hover:underline font-semibold">{" "}Foreum</a
+                >, a self-hostable community platform; an <a
+                    href="https://email-builder-psi-six.vercel.app/"
+                    target="_blank"
+                    class="hover:underline font-semibold"
+                    >Email Template Builder</a
+                >; and <a
+                    href="https://github.com/abdulkareemoj/freader"
+                    target="_blank"
+                    class="hover:underline font-semibold">freader</a
+                >, a multi-platform ebook reader.
+            </p>
+        </Section>
 
-      <p class="mb-4">
-        Currently building
-        <a href="https://foreum.vercel.app/" target="_blank" class="hover:underline font-semibold">{" "}Foreum</a>,
-        a self-hostable community platform;
-        an <a href="https://email-builder-psi-six.vercel.app/" target="_blank" class="hover:underline font-semibold">Email Template Builder</a>;
-        and <a href="https://github.com/abdulkareemoj/freader" target="_blank" class="hover:underline font-semibold">freader</a>,
-        a multi-platform ebook reader.
-      </p>
-    </Section>
+        <Section title="Projects">
+            <div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
+                <ProjectCard
+                    href="/projects/task "
+                    heading="Fintech app Dashboard"
+                    subheading=" A modern, responsive dashboard application built with React and TailwindCSS."
+                    imagePath="https://res.cloudinary.com/dcc1yy1zv/image/upload/v1759321228/www/Screenshot_2025-09-30_at_22-23-27_Task_tvjd1o.png"
+                    altText="Example"
+                />
+                <ProjectCard
+                    href="/projects/email-forge"
+                    heading="Email Forge"
+                    subheading="An Email Template Builder."
+                    imagePath="https://res.cloudinary.com/dcc1yy1zv/image/upload/v1767175755/www/8c2a7926-850a-42c6-b724-9bcef1fe51da.png"
+                    altText="Example"
+                />
 
- 
- 
- 
-  <Section title="Projects">
-    <div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
-      <ProjectCard
-        href="/projects/task "
-        heading="Fintech app Dashboard"
-        subheading=" A modern, responsive dashboard application built with React and TailwindCSS."
-        imagePath="https://res.cloudinary.com/dcc1yy1zv/image/upload/v1759321228/www/Screenshot_2025-09-30_at_22-23-27_Task_tvjd1o.png"
-        altText="Example"
-      />
-      <ProjectCard
-        href="/projects/email-forge"
-        heading="Email Forge"
-        subheading="An Email Template Builder."
-        imagePath="https://res.cloudinary.com/dcc1yy1zv/image/upload/v1767175755/www/8c2a7926-850a-42c6-b724-9bcef1fe51da.png"
-        altText="Example"
-      />
+                <ProjectCard
+                    href="/projects/e-commerce"
+                    heading="Multivendor E‑commerce Platform"
+                    subheading="Modern multivendor e-commerce platform with React Native mobile app and Hono backend"
+                    imagePath="https://res.cloudinary.com/dcc1yy1zv/image/upload/v1784817004/www/marketplace_n2almj.webp"
+                    altText="Example"
+                />
+                <ProjectCard
+                    href="/projects/foreum"
+                    heading="Foreum"
+                    subheading="A powerful, modern forum platform built with Tanstack Start, tRPC, and Drizzle ORM"
+                    imagePath="https://res.cloudinary.com/dcc1yy1zv/image/upload/v1759321228/www/Screenshot_2025-09-30_at_21-58-49_Foreum_-_Modern_Forum_Platform_for_Your_Website_scnops.png"
+                    altText="Lorem, ipsum dolor sit"
+                />
+            </div>
+            <div class="pt-2">
+                <Link
+                    href="/projects"
+                    class="ptransition-colors duration-300 hover:text-accent"
+                    >All projects →</Link
+                >
+            </div>
+        </Section>
 
-      <ProjectCard
-        href="/projects/e-commerce"
-        heading="Multivendor E‑commerce Platform"
-        subheading="Modern multivendor e-commerce platform with React Native mobile app and Hono backend"
-        imagePath="https://res.cloudinary.com/dcc1yy1zv/image/upload/v1773337637/www/multi-ecommerece_ru38ow.png"
-        altText="Example"
-      />
-      <ProjectCard
-        href="/projects/foreum"
-        heading="Foreum"
-        subheading="A powerful, modern forum platform built with Tanstack Start, tRPC, and Drizzle ORM"
-        imagePath="https://res.cloudinary.com/dcc1yy1zv/image/upload/v1759321228/www/Screenshot_2025-09-30_at_21-58-49_Foreum_-_Modern_Forum_Platform_for_Your_Website_scnops.png"
-        altText="Lorem, ipsum dolor sit"
-      />
-  </div> 
-        <div class="pt-2">
-    <Link
-      href="/projects"
-      class="ptransition-colors duration-300 hover:text-accent"
-      >All projects →</Link>
-  </div>
-  
+        {
+            allPostsByDate.length > 0 && (
+                <>
+                    <Section title="Posts">
+                        <ul class="flex flex-col gap-y-3">
+                            {allPostsByDate.map((p) => (
+                                <li class="flex flex-col gap-x-2 sm:flex-row transition-colors duration-300 hover:text-accent">
+                                    <PostPreview post={p} />
+                                </li>
+                            ))}
+                        </ul>
+                    </Section>{" "}
+                    <div class="pt-2 flex justify-start">
+                        <Link
+                            href="/blog"
+                            class="transition-colors duration-300 hover:text-accent"
+                        >
+                            All posts →
+                        </Link>
+                    </div>
+                </>
+            )
+        }
 
-
-
-  </Section>
- 
-  {
-    allPostsByDate.length > 0 && (
-      <>
-        <Section title="Posts">
-          <ul class="flex flex-col gap-y-3">
-            {allPostsByDate.map((p) => (
-              <li class="flex flex-col gap-x-2 sm:flex-row transition-colors duration-300 hover:text-accent">
-                <PostPreview post={p} />
-              </li>
-            ))}
-          </ul>
-        </Section> <div class="pt-2 flex justify-start">
-          <Link
-            href="/blog"
-            class="transition-colors duration-300 hover:text-accent"
-          >
-            All posts →
-          </Link>
-        </div>
-       
-      </>
-    )
-  }
-
-
-  <Section title="Skills">
-    <SkillLayout title="Languages" skills={languages} />
-    <SkillLayout title="Frontend" skills={frontend} />
-    <SkillLayout title="Backend" skills={backend} />
-    <SkillLayout title="Others" skills={others} />
-    <SkillLayout title="Mobile" skills={mobile} />
-  </Section>  </div>
+        <Section title="Skills">
+            <SkillLayout title="Languages" skills={languages} />
+            <SkillLayout title="Frontend" skills={frontend} />
+            <SkillLayout title="Backend" skills={backend} />
+            <SkillLayout title="Others" skills={others} />
+            <SkillLayout title="Mobile" skills={mobile} />
+        </Section>
+    </div>
 </PageLayout>
