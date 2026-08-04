@@ -3,8 +3,8 @@ title: "ReadrSync"
 description: "Modern multivendor e-commerce platform with React Native, Expo and Hono backend"
 date: "Mar 12 2026"
 demoURL: "https://e-commerce-backend-eight-theta.vercel.app/"
-repoURL: "https://github.com/Abdulkareemoj/e-commerce"
-imageUrl: "https://res.cloudinary.com/dcc1yy1zv/image/upload/v1784817004/www/marketplace_n2almj.webp"
+repoURL: "https://github.com/Abdulkareemoj/readrsync"
+imageUrl: "https://res.cloudinary.com/dcc1yy1zv/image/upload/v1785858170/www/bookmarks_lv9tbc.png"
 altText: "Multivendor E-commerce Platform"
 ---
 
