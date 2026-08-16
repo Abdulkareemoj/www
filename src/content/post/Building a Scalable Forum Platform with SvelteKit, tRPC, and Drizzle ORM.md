@@ -1,132 +1,143 @@
 ---
-title: "🧩 Building a Scalable Forum Platform"
-description: "🧩 Building a Scalable Forum Platform with SvelteKit, tRPC, and Drizzle ORM"
-publishDate: "22 Oct 2025"
-tags: ["buidling", "sveltekit", "trpc", "drizzle-orm", "forum", "webdev"]
-draft: true
+title: "Building a Modern Scalable self-hostable Forum app"
+description: "Building a Scalable Forum Platform with TanStack Start, tRPC, and Drizzle ORM"
+publishDate: "02 Dec 2025"
+tags: ["buidling", "react", "bookmarks", "rss", "drizzle-orm", "forum", "webdev"]
+draft: false
 ---
+# Building a Scalable Forum Platform with TanStack Start, tRPC, and Drizzle ORM
 
-# Building a Scalable Forum Platform with SvelteKit, tRPC, and Drizzle ORM
+> “I'm genuinely bored, Lemme try building something actually useful and possibly monetizable.”
 
-“I'm genuinely bored, Lemme try building something actually useful and possibly monetizable.”
 That’s what I told myself when I started this project, part learning experience, part portfolio piece, and part real community platform.
-I wanted to understand what it really takes to build a system that multiple users can interact with accounts, roles, threads, categories, moderation, logging, yup the whole full-stack deal.
+
+I wanted to understand what it really takes to build a system that multiple users can interact with accounts, roles, threads, categories, moderation, logging, yup, the whole full-stack deal.
+
+That project eventually became **Foreum**.
+
+---
 
 ## 🚀 Why Build a Forum?
 
 This project started as a mix of goals:
 
-- A learning project to get hands-on with SvelteKit, tRPC, and Drizzle
-- A portfolio piece to demonstrate real-world architecture and design
-- A potential community platform that could evolve into something functional
+* A learning project to get hands-on with TanStack Start, tRPC, and Drizzle
+* A portfolio piece to demonstrate real-world architecture and design
+* A potential community platform that could evolve into something functional
 
-Forums are deceptively simple, they involve users, posts, categories, threads, roles, and moderation, all connected by a complex web of relationships.
+Forums are deceptively simple. They involve users, posts, categories, threads, roles, and moderation, all connected by a complex web of relationships.
+
 It’s the perfect test for managing data flow, permissions, and scalability.
+
+---
 
 ## ⚙️ The Stack
 
-Initially I was using Next.js for this project but felt it was a bit too much for something like this because I also had another requirement for it. The whole project should be self-hostable in one click, whether on a VPS, Cloud Provider or built locally and just uploaded to a Shared Hosting platform. Inspiration for it came from Open-source projects like [Apache Answers](https://answers.apache.org/) and [Flarum](https://flarum.org).
+Initially I was using Next.js for this project but felt it was a bit too much for something like this because I also had another requirement for it.
 
-While Next.js can definitely do that performance can be iffy with it so after about a week of having started with Next I decided to move to a different framework for the project
+The whole project should be self-hostable in one click, whether on a VPS, cloud provider, or built locally and deployed wherever you want.
 
-| Layer              | Tech            | Why                                                                 |
-| ------------------ | --------------- | ------------------------------------------------------------------- |
-| Frontend Framework | **SvelteKit**   | Great DX, file-based routing, server + client rendering flexibility |
-| API Layer          | **tRPC**        | End-to-end type safety between frontend and backend                 |
-| Database ORM       | **Drizzle ORM** | Schema-first, lightweight migrations, type-safe queries             |
-| UI Components      | **Shadcn UI**   | Accessible and consistent design system                             |
-| Auth System        | **Better-Auth** | Handles sessions, roles, and permissions cleanly                    |
+Inspiration for it came from open-source projects like Apache Answers and Flarum.
+
+While Next.js can definitely do this, after about a week of having started with Next I decided to move to a different framework for the project.
+
+I eventually settled on **TanStack Start**.
+
+The current stack looks like this:
+
+| Layer              | Tech                       | Why                                                            |
+| ------------------ | -------------------------- | -------------------------------------------------------------- |
+| Frontend Framework | **React + TanStack Start** | Modern React framework with SSR and a great routing experience |
+| Routing            | **TanStack Router**        | Type-safe routing with a powerful route structure              |
+| API Layer          | **tRPC**                   | End-to-end type safety between frontend and backend            |
+| Database ORM       | **Drizzle ORM**            | Schema-first, lightweight, type-safe database queries          |
+| Database           | **PostgreSQL**             | Reliable relational database for the forum's data              |
+| UI Components      | **shadcn/ui**              | Accessible and consistent design system                        |
+| Auth System        | **Better Auth**            | Handles sessions, authentication, roles, and permissions       |
+
+The combination has worked really well for this project.
+
+The biggest thing I like is that I can keep the frontend, backend, and database types connected without having to maintain a separate API contract manually.
+
+---
 
 ## 🧠 Architecture Overview
 
-The platform is structured around user roles and modular routes:
+The platform is structured around user roles and modular routes.
 
-```bash
+The application has separate areas for authentication, the main client experience, and administration.
+
+The current route structure covers things like:
+
+```text
 routes
-├───(admin)
-│   ├───appearance
-│   ├───categories
-│   ├───dashboard
-│   ├───feature-flags
-│   ├───moderation-logs
-│   ├───reports
-│   ├───settings
-│   ├───themes
-│   ├───threads
-│   └───users
-├───(auth)
-│   ├───forgot-password
-│   ├───login
-│   ├───reset-password
-│   ├───signup
-│   └───verify-email
-├───(client-area)
-│   ├───bookmarks
-│   ├───categories
-│   │   └───[slug]
-│   ├───embed
-│   │   └───thread
-│   │       └───[threadId]
-│   ├───events
-│   │   ├───new
-│   │   └───[eventId]
-│   ├───groups
-│   │   └───[slug]
-│   │       ├───forum
-│   │       └───members
-│   ├───messages
-│   │   └───[conversationId]
-│   ├───notifications
-│   ├───profile
-│   │   ├───badges
-│   │   └───[username]
-│   │       └───edit
-│   ├───resources
-│   │   ├───new
-│   │   └───[resourceId]
-│   ├───search
-│   ├───settings
-│   ├───tags
-│   │   └───[slug]
-│   └───threads
-│       ├───new
-│       └───[threadId]
-│           ├───delete
-│           ├───edit
-│           └───reply
-│               └───[replyId]
-│                   ├───delete
-│                   └───edit
-├───(landing)
-│   ├───cookies
-│   ├───features
-│   ├───pricing
-│   ├───privacy
-│   ├───solution
-│   │   ├───collaboration
-│   │   ├───design
-│   │   ├───freelancers
-│   │   ├───management
-│   │   ├───organizations
-│   │   ├───startups
-│   │   └───students
-│   └───terms
-└───api
-    ├───auth
-    │   └───[...all]
-    └───trpc
-        └───[...procedure]
+├── auth
+│   ├── forgot-password
+│   ├── login
+│   ├── reset-password
+│   ├── signup
+│   └── verify-email
+│
+├── client-area
+│   ├── bookmarks
+│   ├── categories
+│   │   └── [slug]
+│   ├── events
+│   │   ├── new
+│   │   └── [eventId]
+│   ├── groups
+│   │   └── [slug]
+│   ├── messages
+│   │   └── [conversationId]
+│   ├── notifications
+│   ├── profile
+│   │   ├── badges
+│   │   └── [username]
+│   ├── resources
+│   ├── search
+│   ├── settings
+│   ├── tags
+│   │   └── [slug]
+│   └── threads
+│       ├── new
+│       └── [threadId]
+│           ├── delete
+│           ├── edit
+│           └── reply
+│
+├── admin
+│   ├── appearance
+│   ├── categories
+│   ├── dashboard
+│   ├── feature-flags
+│   ├── moderation-logs
+│   ├── reports
+│   ├── settings
+│   ├── themes
+│   ├── threads
+│   └── users
+│
+└── api
+    └── trpc
 ```
 
-SvelteKit’s grouped routes (e.g., (admin), (moderator)) make it easy to enforce role-based access control using layout guards and hooks.
-Each group has its own layout, navigation, and dashboard context.
+The exact implementation has evolved as the project grew, but the idea has stayed the same: keep different areas of the application isolated and give each area its own context.
+
+TanStack Router makes this especially nice because routes can be organized into nested layouts and protected sections.
+
+Instead of repeating authentication logic everywhere, I can put the relevant checks at the appropriate route boundary.
+
+That becomes especially useful once you have multiple dashboards and different permission levels.
+
+---
 
 ## 🔐 Handling Roles and Permissions
 
 Authentication and role management were core from day one.
-I used Better-Auth, a simple but flexible library, to manage session tokens, user roles, and protected routes. The plugins make it easy to extend functionality.
 
-Example snippet:
+I use **Better Auth** to manage authentication, sessions, user roles, and permissions.
+
+The configuration stays relatively simple:
 
 ```ts
 export const auth = betterAuth({
@@ -144,190 +155,180 @@ export const auth = betterAuth({
 });
 ```
 
-so in the client area routes I can just add a simple guard in the layout to make sure only authenticated users can access those routes.
+From there, protected parts of the application can check the current session before allowing access.
+
+The important part for me wasn't just making a login page.
+
+It was thinking about what happens **after** someone logs in.
+
+Who can create something?
+
+Who can edit it?
+
+Who can delete it?
+
+Who can moderate it?
+
+Who gets access to the admin dashboard?
+
+Those questions start becoming much more interesting once you have an actual community application.
+
+For example, authenticated routes can check whether a session exists before continuing:
 
 ```ts
-// src/routes/(client-area)/+layout.server.ts
-import { redirect } from "@sveltejs/kit";
+const session = await auth.api.getSession({
+  headers: request.headers,
+});
 
-import { auth } from "$server/auth";
-
-import type { LayoutServerLoad } from "./$types";
-
-export const load: LayoutServerLoad = async ({ request, url }) => {
-  const session = await auth.api.getSession({ headers: request.headers });
-  const isProfilePage = url.pathname.match(/^\/profile\/[^\\/]+$/);
-
-  if (!session?.user && !isProfilePage) {
-    throw redirect(
-      303,
-      `/login?redirectTo=${encodeURIComponent(url.pathname)}`
-    );
-  }
-
-  return {
-    user: session?.user,
-  };
-};
-```
-
-And in the admin routes I can do the same but also check if the user has the admin role.
-
-```ts
-// src/routes/(admin)/+layout.server.ts
-import { redirect } from "@sveltejs/kit";
-
-import { auth } from "$server/auth";
-
-import type { LayoutServerLoad } from "./$types";
-
-export const load: LayoutServerLoad = async ({ request, url }) => {
-  const session = await auth.api.getSession({ headers: request.headers });
-
-  if (!session?.user) {
-    throw redirect(
-      303,
-      `/login?redirectTo=${encodeURIComponent(url.pathname)}`
-    );
-  }
-
-  const hasAdminPermission = await auth.api.userHasPermission({
-    body: {
-      userId: session.user.id,
-      permissions: {
-        user: [
-          "create",
-          "list",
-          "set-role",
-          "ban",
-          "impersonate",
-          "delete",
-          "set-password",
-          "get",
-          "update",
-        ], //add admin-specific permissions
-      },
+if (!session?.user) {
+  throw redirect({
+    to: "/login",
+    search: {
+      redirectTo: location.href,
     },
   });
-
-  if (!hasAdminPermission) {
-    throw redirect(303, "/");
-  }
-
-  return {
-    user: session.user,
-  };
-};
+}
 ```
 
-I can repeat this for any other route group, then build out specific admin features like user management, category controls, and moderation tools within this protected route group.
+And administrative routes can go a step further by checking permissions before allowing access.
+
+That gives me a central place to enforce access instead of relying on hiding buttons in the UI.
+
+---
 
 ## 🧩 Backend Integration with tRPC
 
-tRPC acts as the bridge between frontend and backend, no REST endpoints, no GraphQL overhead, just fully typed procedures.
+tRPC acts as the bridge between the frontend and backend.
 
-Example:
+No REST endpoints, no GraphQL overhead, just fully typed procedures.
 
-```ts
-import { initTRPC, TRPCError } from "@trpc/server";
-import pino from "pino";
-import superjson from "superjson";
+One of the things I wanted to experiment with in this project was how far I could take end-to-end type safety.
 
-import type { Context } from "./context";
+The routers are split into smaller, single-purpose modules rather than having one massive API definition.
 
-const t = initTRPC.context<Context>().create({
-  transformer: superjson,
-});
+There are routers for things like:
 
-// Structured pino logger (development: pretty print)
-const logger = (() => {
-  if (process.env.NODE_ENV === "development") {
-    // pretty-print transport for dev
-    return pino({
-      transport: {
-        target: "pino-pretty",
-        options: { colorize: true },
-      },
-    });
-  }
-  return pino();
-})();
+* Threads
+* Categories
+* Tags
+* Users
+* Bookmarks
+* Notifications
+* Settings
 
-// Development-only request/response logger middleware
-const devLogger = t.middleware(async ({ path, type, input, next }) => {
-  if (process.env.NODE_ENV !== "development") return next();
+This makes it much easier to find where a particular piece of functionality belongs.
 
-  const start = Date.now();
-  try {
-    const result = await next();
-    const duration = Date.now() - start;
-    logger.debug(
-      { path, type, duration, input, output: result.ok ? result.data : null },
-      "trpc call"
-    );
-    return result;
-  } catch (err) {
-    const duration = Date.now() - start;
-    logger.error({ path, type, duration, err }, "trpc error");
-    throw err;
-  }
-});
+I also added structured logging around tRPC calls during development using **Pino**.
 
-// Export a devProcedure that routers can opt into for extra logging in development
-export const devProcedure = t.procedure.use(devLogger);
-/**
- * Export reusable router and procedure helpers
- * that can be used throughout the router
- */
-export const router = t.router;
-// Use a base procedure that includes the devLogger in development so all procedures
-// log request/response automatically without requiring opt-in.
-const baseProcedure =
-  process.env.NODE_ENV === "development"
-    ? t.procedure.use(devLogger)
-    : t.procedure;
-export const publicProcedure = baseProcedure;
+That gives me useful information when debugging things like:
 
-const isAuthed = t.middleware(({ ctx, next }) => {
-  if (!ctx.user) {
-    throw new TRPCError({ code: "UNAUTHORIZED" });
-  }
-  return next({
-    ctx: {
-      ...ctx,
-      user: ctx.user as NonNullable<typeof ctx.user>,
-    },
-  });
-});
-
-export const protectedProcedure = baseProcedure.use(isAuthed);
+```text
+procedure
+request type
+input
+duration
+result
+error
 ```
+
+It's one of those things that seems unnecessary until something breaks.
+
+Then suddenly your logs become your best friend.
+
+---
 
 ## 🗃️ Managing Data with Drizzle ORM
 
 One of the biggest lessons was data modeling.
+
 Forums involve lots of relationships:
 
-- users → threads → replies
-- users → roles
-- tags ↔ threads (many-to-many)
-- categories → threads
-- users ↔ threads (many-to-many)
+* users → threads → replies
+* users → roles
+* tags ↔ threads (many-to-many)
+* categories → threads
+* users ↔ threads (many-to-many)
+* users → bookmarks
+* users → notifications
+* users → settings
 
-Drizzle made it easy to define schemas with clarity:
+Drizzle made it easy to define these schemas while keeping the database layer strongly typed.
+
+This was probably one of the areas where the project taught me the most.
+
+When you're building something simple, you can get away with not thinking too much about the data model.
+
+A forum doesn't really let you do that.
+
+Almost everything is connected to something else.
+
+And once you add features like bookmarks, notifications, moderation, profiles, and permissions, those relationships start becoming important very quickly.
+
+---
+
+## 🐳 Making It Self-Hostable
+
+One of the original reasons I moved away from my initial setup was that I wanted Foreum to be easy to deploy.
+
+The current project supports Docker Compose with the application, PostgreSQL, and Caddy handling the reverse proxy and automatic TLS.
+
+A basic deployment can be started with:
+
+```bash
+docker compose up -d
+```
+
+The project can also be deployed manually on a VPS or through supported cloud/serverless platforms.
+
+That was always one of the goals for Foreum.
+
+I don't want it to be a project that only works when deployed to one specific platform.
+
+If someone wants to run their own community, they should be able to take the code and host it themselves.
+
+---
 
 ## 🧩 Lessons Learned
 
-- Plan your routes early. Nested layouts and multiple dashboards can get messy fast without structure.
-- Use typed APIs. tRPC and Drizzle together drastically reduce runtime errors.
-- Design for users, not just yourself. Think about roles, edge cases, and permissions from day one.
-- Logging > Debugging. Logs are your best friend once multiple users start interacting.
-- Consistency over cleverness. Simple, predictable patterns scale better than fancy one-off solutions.
+* **Plan your routes early.** Nested routes, layouts, and multiple dashboards can get messy fast without structure.
+* **Use typed APIs.** tRPC and Drizzle together drastically reduce runtime errors.
+* **Design for users, not just yourself.** Think about roles, edge cases, and permissions from day one.
+* **Logging > Debugging.** Logs are your best friend once multiple users start interacting with the application.
+* **Think about the database early.** Forums have a lot of relationships, and changing the data model later can become painful.
+* **Consistency over cleverness.** Simple, predictable patterns scale better than fancy one-off solutions.
+* **Make deployment part of the project.** If the goal is self-hosting, deployment shouldn't be something you figure out after everything else is finished.
+
+---
 
 ## 🧭 What’s Next
 
-- The next steps for the platform:
-- Add reporting tools for community moderation
-- Implement notifications for replies and mentions
-- Deploy with Vercel + Neon (for Postgres)
-- Possibly open it for small community testing
+There are still quite a few things I want to work on:
+
+* Better reporting and moderation tools
+* More advanced notifications for replies and mentions
+* Application-level rate limiting
+* Watched words / automatic moderation
+* More flexible permissions
+* Better plugin and theme architecture
+* Internationalization
+* Digest emails
+* Backup and restore
+* Webhooks
+
+Some of these are already on the roadmap, while others will probably change as the project evolves.
+
+That's the nice thing about building something like this as an open-source project, I don't have to pretend the first version is going to get everything right.
+
+For now, I'm mainly interested in continuing to improve the architecture and making Foreum easier to deploy, customize, and contribute to.
+
+---
+
+Foreum is open source and MIT licensed.
+
+If you're interested in the project, you can find the source here:
+
+**[github.com/Abdulkareemoj/foreum](https://github.com/Abdulkareemoj/foreum)**
+
+It's still very much a work in progress, but that's also the point.
+
+I'm building it to learn, to experiment, and hopefully eventually to have something that people can actually use.
