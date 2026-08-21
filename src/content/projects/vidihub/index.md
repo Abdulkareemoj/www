@@ -2,10 +2,10 @@
 title: "Vidihub"
 description: "Vidihub is a media streaming platform (movies, TV series, anime, manga)"
 date: "Mar 12 2026"
-demoURL: "https://"
-repoURL: "https://github.com/Abdulkareemoj/readrsync"
-imageUrl: "https://res.cloudinary.com/dcc1yy1zv/image/upload/v1785858171/www/rss_pjyy4x.png"
-altText: "Multivendor E-commerce Platform"
+demoURL: "https://github.com/Abdulkareemoj/Vidihub"
+repoURL: "https://github.com/Abdulkareemoj/vidihub-downloads"
+imageUrl: "https://res.cloudinary.com/dcc1yy1zv/image/upload/v1786557706/vidihub/home_page_vkgzrs.png"
+altText: "Vidihub is a free  app to stream movies and TV, watch anime, read manga, and catch live streams."
 ---
 
 A simple app for streaming movies, series, anime, manga, live sports over the internet
