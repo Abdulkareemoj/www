@@ -7,12 +7,14 @@ import rehypeExternalLinks from "rehype-external-links";
 import rehypeUnwrapImages from "rehype-unwrap-images";
 import expressiveCode from "astro-expressive-code";
 import icon from "astro-icon";
+import vercel from "@astrojs/vercel";
 import { unified } from "@astrojs/markdown-remark";
 import { expressiveCodeOptions } from "./src/site.config.ts";
 import { remarkReadingTime } from "./src/utils/remarkReadingTime.ts";
 // https://astro.build/config
 export default defineConfig({
   site: "https://abdulkareemoj.vercel.app",
+  adapter: vercel(),
   vite: {
     plugins: [tailwindcss()],
   },
