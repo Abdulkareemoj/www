@@ -1,80 +1,98 @@
 ---
-import { getCollection, render } from 'astro:content'
-import PageLayout from '@/layouts/BaseLayout.astro'
-import { dateRange } from '@/lib/utils'
-import Button from '@components/Button.astro'
+import { getCollection, render } from "astro:content";
+import PageLayout from "@/layouts/BaseLayout.astro";
+import { dateRange } from "@/lib/utils";
+import Button from "@components/Button.astro";
 
-const collection = (await getCollection('work')).sort(
-	(a, b) => new Date(b.data.dateStart).valueOf() - new Date(a.data.dateStart).valueOf()
-)
+const collection = (await getCollection("work")).sort(
+    (a, b) =>
+        new Date(b.data.dateStart).valueOf() -
+        new Date(a.data.dateStart).valueOf(),
+);
 
 const work = await Promise.all(
-	collection.map(async (item) => {
-		const { Content } = await render(item)
-		return { ...item, Content }
-	})
-)
+    collection.map(async (item) => {
+        const { Content } = await render(item);
+        return { ...item, Content };
+    }),
+);
 
 const meta = {
-	description: 'Work Experience',
-	title: 'Work'
-}
+    description: "Work Experience",
+    title: "Work",
+};
 ---
 
 <PageLayout meta={meta}>
-	<div class='w-full'>
-		<Button title='Back' href='/' style='button'>
-			<svg
-				xmlns='http://www.w3.org/2000/svg'
-				width='14'
-				height='14'
-				viewBox='0 0 24 24'
-				slot='icon-before'
-			>
-				<path
-					fill='currentColor'
-					d='m6.921 12.5l5.792 5.792L12 19l-7-7l7-7l.713.708L6.921 11.5H19v1z'
-				>
-				</path>
-			</svg>
-		</Button>
-		<div class='flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-center'>
-			<h1 class='mb-2 mt-6 text-3xl font-bold tracking-tight'>Work Experience</h1>
-			<Button title='Download Resume' href='/resume.pdf' style='button' class='transition-shadow hover:shadow-md'>
-				<svg
-					xmlns='http://www.w3.org/2000/svg'
-					width='24'
-					height='24'
-					viewBox='0 0 24 24'
-					fill='none'
-					stroke='currentColor'
-					stroke-width='2'
-					stroke-linecap='round'
-					stroke-linejoin='round'
-					class='lucide lucide-newspaper'
-					><path
-						d='M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2'
-					></path><path d='M18 14h-8'></path><path d='M15 18h-5'></path><path d='M10 6h8v4h-8V6Z'
-					></path></svg
-				>
-			</Button>
-		</div>
+    <div class="w-full">
+        <Button title="Back" href="/" style="button">
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                slot="icon-before"
+            >
+                <path
+                    fill="currentColor"
+                    d="m6.921 12.5l5.792 5.792L12 19l-7-7l7-7l.713.708L6.921 11.5H19v1z"
+                >
+                </path>
+            </svg>
+        </Button>
+        <div
+            class="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-center"
+        >
+            <h1 class="mb-2 mt-6 text-3xl font-bold tracking-tight">
+                Work Experience
+            </h1>
+            <Button
+                title="Download Resume"
+                href="/abdulkareemresume.pdf"
+                style="button"
+                class="transition-shadow hover:shadow-md"
+            >
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-newspaper"
+                    ><path
+                        d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"
+                    ></path><path d="M18 14h-8"></path><path d="M15 18h-5"
+                    ></path><path d="M10 6h8v4h-8V6Z"></path></svg
+                >
+            </Button>
+        </div>
 
-		<ul class='flex flex-col gap-8 py-8'>
-			{
-				work.map((entry) => (
-					<li class='group rounded-2xl border border-border bg-card shadow-sm p-6 transition-shadow hover:shadow-md active:scale-[0.98]'>
-						<div class='text-xs font-semibold uppercase tracking-widest text-accent mb-2'>
-							{dateRange(entry.data.dateStart, entry.data.dateEnd)}
-						</div>
-						<div class='text-xl font-semibold tracking-tight group-hover:text-accent transition-colors mb-1'>{entry.data.company}</div>
-						<div class='text-sm text-muted-foreground mb-4'>{entry.data.role}</div>
-						<article class='prose prose-sm prose-zinc dark:prose-invert prose-ul:list-disc prose-ul:space-y-1 prose-li:marker:text-accent max-w-none'>
-							<entry.Content />
-						</article>
-					</li>
-				))
-			}
-		</ul>
-	</div>
+        <ul class="flex flex-col gap-8 py-8">
+            {
+                work.map((entry) => (
+                    <li class="group rounded-2xl border border-border bg-card shadow-sm p-6 transition-shadow hover:shadow-md active:scale-[0.98]">
+                        <div class="text-xs font-semibold uppercase tracking-widest text-accent mb-2">
+                            {dateRange(
+                                entry.data.dateStart,
+                                entry.data.dateEnd,
+                            )}
+                        </div>
+                        <div class="text-xl font-semibold tracking-tight group-hover:text-accent transition-colors mb-1">
+                            {entry.data.company}
+                        </div>
+                        <div class="text-sm text-muted-foreground mb-4">
+                            {entry.data.role}
+                        </div>
+                        <article class="prose prose-sm prose-zinc dark:prose-invert prose-ul:list-disc prose-ul:space-y-1 prose-li:marker:text-accent max-w-none">
+                            <entry.Content />
+                        </article>
+                    </li>
+                ))
+            }
+        </ul>
+    </div>
 </PageLayout>
