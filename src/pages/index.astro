@@ -22,6 +22,7 @@ const frontend = [
     "React",
     "Astro",
     "Markdown",
+    "SvelteKit",
 ];
 const backend = [
     "Node.js",
@@ -31,6 +32,10 @@ const backend = [
     "MongoDB",
     "MySQL",
     "PostgreSQL",
+    "ASP.NET Core",
+    "Express.js",
+    "Hono",
+    "tRPC",
 ];
 const others = [
     "AWS",
@@ -159,14 +164,20 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
                     imagePath="https://res.cloudinary.com/dcc1yy1zv/image/upload/v1785858170/www/bookmarks_lv9tbc.png"
                     altText="Example"
                 />
-                <ProjectCard
+                <!-- <ProjectCard
                     href="/projects/email-forge"
                     heading="Email Forge"
                     subheading="An Email Template Builder."
                     imagePath="https://res.cloudinary.com/dcc1yy1zv/image/upload/v1767175755/www/8c2a7926-850a-42c6-b724-9bcef1fe51da.png"
                     altText="Example"
+                /> -->
+   <ProjectCard
+                    href="/projects/freader"
+                    heading="Freader"
+                    subheading="A cross-platform ebook reader app."
+                    imagePath="https://res.cloudinary.com/dcc1yy1zv/image/upload/v1785858170/www/ebooks_oylqvk.png"
+                    altText="Example"
                 />
-
                 <ProjectCard
                     href="/projects/e-commerce"
                     heading="Multivendor E‑commerce Platform"
