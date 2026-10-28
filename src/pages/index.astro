@@ -87,12 +87,8 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
                     class="border-border flex flex-row items-center gap-x-3 rounded-3xl border px-4 py-2 text-sm shadow-sm transition-all duration-300 hover:shadow-md hover:translate-y-[-2px] hover:border-accent"
                 >
                     <span class="relative flex items-center justify-center">
-                        <span
-                            class="absolute inline-flex h-2 w-2 animate-ping rounded-full border border-accent bg-accent opacity-75"
-                        ></span>
-                        <span
-                            class="relative inline-flex h-2 w-2 rounded-full bg-accent"
-                        ></span>
+                        <span class="absolute inline-flex h-2 w-2 animate-ping rounded-full border border-accent bg-accent opacity-75"></span>
+                        <span class="relative inline-flex h-2 w-2 rounded-full bg-accent"></span>
                     </span>
 
                     <p class="font-semibold">Available</p>
@@ -104,36 +100,58 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
             <p>
                 <small>IPA /ˈwiztek/, no meaning, I made it up</small>
                 <br />
-                Hi, I'm <strong>Abdulkareem</strong> (aka <strong>WiZtEk</strong
-                >). I'm a Fullstack Developer focused on <strong>Web</strong> and
-                <strong>{" "}Game Development</strong>. For web I work with
-                <a class="hover:underline" href="https://nextjs.org"
-                    >{" "}Next.js</a
-                >,
-                <a class="hover:underline" href="https://kit.svelte.dev"
-                    >{" "}SvelteKit</a
-                >,
-                <a class="hover:underline" href="https://nodejs.org"
-                    >{" "}Node.js</a
-                >,
-                <a class="hover:underline" href="https://hono.dev">{" "}Hono</a
-                >, and
-                <a class="hover:underline" href="https://deno.com">{" "}Deno</a
-                >. For games,
-                <a class="hover:underline" href="https://www.unrealengine.com/"
-                    >{" "}Unreal Engine</a
-                >,
-                <a class="hover:underline" href="https://godot.com"
-                    >{" "}Godot</a
-                >, and
-                <a class="hover:underline" href="https://blender.org"
-                    >{" "}Blender</a
-                >. Also exploring <strong>C#</strong> with
+                Hi, I'm <strong>Abdulkareem</strong> (aka{" "}
+                <strong>WiZtEk</strong>). I'm a Fullstack Developer focused on{" "}
+                <strong>Web</strong> and
+                <strong> Game Development</strong>. For web I work with
+                <a class="hover:underline" href="https://nextjs.org">
+                    {" "}
+                    Next.js
+                </a>
+                ,
+                <a class="hover:underline" href="https://kit.svelte.dev">
+                    {" "}
+                    SvelteKit
+                </a>
+                ,
+                <a class="hover:underline" href="https://nodejs.org">
+                    {" "}
+                    Node.js
+                </a>
+                ,
+                <a class="hover:underline" href="https://hono.dev">
+                    {" "}
+                    Hono
+                </a>
+                , and
+                <a class="hover:underline" href="https://deno.com">
+                    {" "}
+                    Deno
+                </a>
+                . For games,
+                <a class="hover:underline" href="https://www.unrealengine.com/">
+                    {" "}
+                    Unreal Engine
+                </a>
+                ,
+                <a class="hover:underline" href="https://godot.com">
+                    {" "}
+                    Godot
+                </a>
+                , and
+                <a class="hover:underline" href="https://blender.org">
+                    {" "}
+                    Blender
+                </a>
+                . Also exploring <strong>C#</strong> with
                 <a
                     class="hover:underline"
                     href="https://dotnet.microsoft.com/en-us/apps/aspnet"
-                    >{" "}ASP.NET</a
-                >.
+                >
+                    {" "}
+                    ASP.NET
+                </a>
+                .
             </p>
 
             <p class="mb-4">
@@ -141,17 +159,28 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
                 <a
                     href="https://foreum.vercel.app/"
                     target="_blank"
-                    class="hover:underline font-semibold">{" "}Foreum</a
-                >, a self-hostable community platform; an <a
+                    class="hover:underline font-semibold"
+                >
+                    {" "}
+                    Foreum
+                </a>
+                , a self-hostable community platform; an{" "}
+                <a
                     href="https://email-builder-psi-six.vercel.app/"
                     target="_blank"
                     class="hover:underline font-semibold"
-                    >Email Template Builder</a
-                >; and <a
+                >
+                    Email Template Builder
+                </a>
+                ; and{" "}
+                <a
                     href="https://github.com/abdulkareemoj/freader"
                     target="_blank"
-                    class="hover:underline font-semibold">freader</a
-                >, a multi-platform ebook reader.
+                    class="hover:underline font-semibold"
+                >
+                    freader
+                </a>
+                , a multi-platform ebook reader.
             </p>
         </Section>
 
@@ -164,18 +193,25 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
                     imagePath="https://res.cloudinary.com/dcc1yy1zv/image/upload/v1785858170/www/bookmarks_lv9tbc.png"
                     altText="Example"
                 />
-                <!-- <ProjectCard
-                    href="/projects/email-forge"
-                    heading="Email Forge"
-                    subheading="An Email Template Builder."
-                    imagePath="https://res.cloudinary.com/dcc1yy1zv/image/upload/v1767175755/www/8c2a7926-850a-42c6-b724-9bcef1fe51da.png"
+                <ProjectCard
+                    href="/projects/clipapp"
+                    heading="MyClipApp"
+                    subheading="A Windows screen-capture tool."
+                    imagePath="https://res.cloudinary.com/dcc1yy1zv/image/upload/v1793188249/www/4af2fec9-286d-4d23-9ebc-9b467d001fdd.png"
                     altText="Example"
-                /> -->
-   <ProjectCard
+                />
+                <ProjectCard
                     href="/projects/freader"
                     heading="Freader"
                     subheading="A cross-platform ebook reader app."
                     imagePath="https://res.cloudinary.com/dcc1yy1zv/image/upload/v1785858170/www/ebooks_oylqvk.png"
+                    altText="Example"
+                />
+                <ProjectCard
+                    href="/projects/billy"
+                    heading="Billy"
+                    subheading="Propery Management Platform MVP"
+                    imagePath="https://res.cloudinary.com/dcc1yy1zv/image/upload/v1785156081/www/Screenshot_27-7-2026_134029_billy-frontend.vercel.app_kvbhxd.jpg"
                     altText="Example"
                 />
                 <ProjectCard
@@ -197,34 +233,33 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
                 <Link
                     href="/projects"
                     class="ptransition-colors duration-300 hover:text-accent"
-                    >All projects →</Link
                 >
+                    All projects →
+                </Link>
             </div>
         </Section>
 
-        {
-            allPostsByDate.length > 0 && (
-                <>
-                    <Section title="Posts">
-                        <ul class="flex flex-col gap-y-3">
-                            {allPostsByDate.map((p) => (
-                                <li class="flex flex-col gap-x-2 sm:flex-row transition-colors duration-300 hover:text-accent">
-                                    <PostPreview post={p} />
-                                </li>
-                            ))}
-                        </ul>
-                    </Section>{" "}
-                    <div class="pt-2 flex justify-start">
-                        <Link
-                            href="/blog"
-                            class="transition-colors duration-300 hover:text-accent"
-                        >
-                            All posts →
-                        </Link>
-                    </div>
-                </>
-            )
-        }
+        {allPostsByDate.length > 0 && (
+            <>
+                <Section title="Posts">
+                    <ul class="flex flex-col gap-y-3">
+                        {allPostsByDate.map((p) => (
+                            <li class="flex flex-col gap-x-2 sm:flex-row transition-colors duration-300 hover:text-accent">
+                                <PostPreview post={p} />
+                            </li>
+                        ))}
+                    </ul>
+                </Section>{" "}
+                <div class="pt-2 flex justify-start">
+                    <Link
+                        href="/blog"
+                        class="transition-colors duration-300 hover:text-accent"
+                    >
+                        All posts →
+                    </Link>
+                </div>
+            </>
+        )}
 
         <Section title="Skills">
             <SkillLayout title="Languages" skills={languages} />
