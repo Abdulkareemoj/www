@@ -2,6 +2,7 @@
 title: "FReader"
 description: "One reader for everything you read, look at, and listen to comics, ebooks, and audiobooks in a single local-first library"
 date: "Oct 28 2026"
+demoUrl: "https://freader-website.vercel.app/"
 repoURL: "https://github.com/Abdulkareemoj/freader"
 imageUrl: "https://res.cloudinary.com/dcc1yy1zv/image/upload/v1795135492/www/Screenshot_2026-11-20_011105_l978s2.png"
 altText: "FReader Cross-platform Reader"
