@@ -28,7 +28,9 @@ const meta = {
 	title: project.data.title,
 	description: project.data.description,
 	articleDate: project.data.date.toISOString(),
-	ogImage: project.data.imageUrl
+	ogImage:
+		project.data.ogImage ??
+		`/og-image/projects/${project.id.replace(/\/index$/, '')}.png`
 }
 ---
 

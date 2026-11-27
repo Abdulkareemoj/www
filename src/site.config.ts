@@ -2,7 +2,7 @@ import type { SiteConfig } from '@/types'
 import type { AstroExpressiveCodeOptions } from 'astro-expressive-code'
 
 export const siteConfig: SiteConfig = {
-	// Used as both a meta property (src/components/BaseHead.astro L:31 + L:49) & the generated satori png (src/pages/og-image/[slug].png.ts)
+	// Used in page metadata and generated OG images.
 	author: 'Abdulkareem',
 	// Meta property used to construct the meta title property, found in src/components/BaseHead.astro L:11
 	title: 'WiZtEk',
@@ -21,7 +21,8 @@ export const siteConfig: SiteConfig = {
 			year: 'numeric'
 		}
 	},
-	email: 'abdulkareemojerinde@gmail.com'
+	email: 'abdulkareemojerinde@gmail.com',
+	
 }
 
 export const menuLinks: Array<{ title: string; path: string }> = [

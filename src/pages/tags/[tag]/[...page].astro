@@ -33,7 +33,8 @@ const { tag } = Astro.params
 
 const meta = {
 	description: `View all posts with the tag - ${tag}`,
-	title: `Tag: ${tag}`
+	title: `Tag: ${tag}`,
+	ogImage: `/og-image/tags/${tag}.png`
 }
 
 const paginationProps = {

@@ -55,6 +55,7 @@ const projects = defineCollection({
 		demoURL: z.string().optional(),
 		repoURL: z.string().optional(),
 		imageUrl: z.string().url(),
+		ogImage: z.string().optional(),
 		altText: z.string(),
 		heroVideo: z.string().url().optional()
 	})

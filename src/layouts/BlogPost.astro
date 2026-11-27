@@ -15,7 +15,7 @@ const { post } = Astro.props
 const { data } = post
 const { description, ogImage, publishDate, title, updatedDate } = data
 
-const socialImage = ogImage ?? `/og-image/${post.id.replace(/\/index$/, '')}.png`
+const socialImage = ogImage ?? `/og-image/blog/${post.id.replace(/\/index$/, '')}.png`
 const articleDate = updatedDate?.toISOString() ?? publishDate.toISOString()
 const { headings } = await render(post)
 ---
